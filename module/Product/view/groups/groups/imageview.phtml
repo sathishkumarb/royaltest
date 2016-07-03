@@ -1,0 +1,1123 @@
+<?php 
+	if($locales_selected=='ar_AE'){
+		$language_class="ar";
+	}else{
+		$language_class="en";
+	}	 
+?>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<div id="media_view" ng-app="media_app" ng-controller="mediaController" ng-cloak> 
+    <div class="feed-filter_outer sub_top-margin">
+    	<div class="home-container">
+        	<h1><a href="<?php echo $this->basePath(); ?>/groups/{{mediaData.group_seo_title}}"><i class="back-button"></i>{{mediaData.group_title}}</a></h1>
+        </div>
+    </div>    
+    <div class="home-container feeds-container">
+    	<div class="group-view-outer mediaview <?php echo $language_class; ?>">
+        	<div class="row">
+            	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                	<div class="post-outer border_radius">
+                        <div class="post_header">
+                            <span class="vertical_align"></span>
+                            <div class="header-profile_image">
+								<a href="<?php echo $this->basePath(); ?>/{{mediaData.user_profile_name}}">
+								<img alt="" ng-if="mediaData.profile_photo!=null&&mediaData.profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{mediaData.user_id}}/{{ mediaData.profile_photo }}">
+								<img alt="" ng-if="(mediaData.profile_photo==null||mediaData.profile_photo=='')&&(mediaData.user_fbid!=null&&mediaData.user_fbid!='')" src="https://graph.facebook.com/{{mediaData.user_fbid}}/picture?width=66&&height=66">
+								<img alt="" ng-if="(mediaData.profile_photo==null||mediaData.profile_photo=='')&&(mediaData.user_fbid==null||mediaData.user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+								</a>
+							</div>
+                            <div class="post_profile-name">
+                                <a href="<?php echo $this->basePath(); ?>/{{mediaData.user_profile_name}}">{{mediaData.user_given_name}}</a>
+                                <span><?php echo $this->translate('posted in','default'); ?> <a href="<?php echo $this->basePath(); ?>/groups/{{mediaData.group_seo_title}}">{{mediaData.group_title}}</a></span>
+                            </div>
+                            <div class="post_time noti_time"><i></i>{{mediaData.time}}</div>
+                            <div class="clear"></div>
+							<div class="post_option-outer">
+								<a href="javascript:void(0);" data-toggle="dropdown" id="post_option"><i></i></a>
+								<ul class="dropdown-menu post-option_dropdown color-trans" role="menu" aria-labelledby="post_in_group">									 
+									<li><a href="javascript:void(0);" data-toggle="modal" data-target="#feed_delete" ng-if="mediaData.is_logged_user_admin==1||mediaData.user_id==profile_data.user_id"  ng-click="deleteFeed('Image',mediaData.image_id)"><?php echo $this->translate('Delete this post','default'); ?></a></li>
+									<li><a href="javascript:void(0);" ng-if="mediaData.user_id!=profile_data.user_id" ng-click="ReportPost('Image',mediaData.image_id)" data-toggle="modal" data-target="#report_post"><?php echo $this->translate('Report this post','default'); ?></a></li>
+								 
+								</ul>
+							</div>
+                        </div>
+                         <div class="next-previous-butn">
+							<a  ng-if="mediaData.prev_id!=''" href="<?php echo $this->basePath(); ?>/groups/{{mediaData.group_seo_title}}/media/image/{{mediaData.group_media_id}}/{{mediaData.prev_id}}">&laquo;<?php echo $this->translate('Previous','default'); ?></a>
+                        	<a ng-if="mediaData.next_id!=''" href="<?php echo $this->basePath(); ?>/groups/{{mediaData.group_seo_title}}/media/image/{{mediaData.group_media_id}}/{{mediaData.next_id}}"><?php echo $this->translate('Next','default'); ?>&raquo;</a> 
+                        </div>
+                        <div class="post_post-image">                        	
+							<div ng-class="{'singleGrid' :mediaData.media_files.length==1, 'doubleGrid' : mediaData.media_files.length==2,'trilpleGrid' : mediaData.media_files.length==3,'multiGrid' : mediaData.media_files.length>3}">
+									
+									<ul class="media_image_list">
+										<li ng-repeat="media_file in mediaData.media_files| limitTo:4">
+											<img ng-if="media_file.media_type=='image'" src="<?php echo $this->basePath(); ?>/public/datagd/group/{{mediaData.group_id}}/media/{{media_file.files}}" alt=""   />
+											<div ng-if="media_file.media_type=='youtube'">
+											{{loadYoutubeVideo(media_file.video_id)}}
+											<div id="video_content"></div>
+											</div>
+										</li>
+									</ul>
+									 
+							</div>
+                        </div>
+                        <div class="post_status-text view_status">
+                           {{mediaData.media_caption}}
+                        </div>                       
+                        <div class="post_status-footer">
+							<span class="like_comment_outer">
+								<span ng-if="likeAjax==1"><img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"></span>
+								<span ng-if="likeAjax==0">
+									<a ng-click="funUnLikeAction('Image',mediaData.image_id)" ng-if="mediaData.is_liked==1" class="post_likes liked" href="javascript:void(0);">
+									<i></i></a>
+									<a ng-click="funLikeAction('Image',mediaData.image_id)" ng-if="mediaData.is_liked!=1" class="post_likes" href="javascript:void(0);">
+									<i></i></a>
+									<span class="tootltip_outer">
+										<a  data-placement="bottom" data-toggle="tooltip" class="post_likes_count" ng-if="mediaData.like_count>0" onmouseout="unloadToolTip()" onmouseover="loadToolTip()" href="javascript:void(0);" data-original-title="" title="">{{mediaData.like_count}} <?php echo $this->translate('likes','default'); ?></a>
+										<a  data-placement="bottom" data-toggle="tooltip" class="post_likes_count" ng-if="mediaData.like_count==0"   href="javascript:void(0);" data-original-title="" title="">{{mediaData.like_count}} <?php echo $this->translate('likes','default'); ?></a>
+										<div style="display: none;" id="tooltip_activity" class="like_tooltip">
+											<span ng-repeat="items in mediaData.arr_likedUsers">{{items}}</span>
+										</div>
+									</span>
+								</span>
+							</span>
+							<span   class="post_comment-right">
+								<a ng-click="LoadCommentWindow()" ng-if="mediaData.is_commented==1" class="post_reply post_comments comented" href="javascript:void(0);"><i></i></a>
+								<a ng-click="LoadCommentWindow()" ng-if="mediaData.is_commented!=1" class="post_reply post_comments" href="javascript:void(0);"><i></i></a>
+								<a class="post_comments" ng-click="LoadCommentWindow()" href="javascript:void(0);">{{mediaData.comment_count}} <?php echo $this->translate('comments','default'); ?></a>
+							</span>
+							<div id="post_reply" class="post_comment-outer ng-scope" ng-if="load_commentbox==1">
+								<div class="header-profile_image comment_profile-img">
+									<img alt="" ng-if="profile_data.profile_photo!=null&&profile_data.profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{profile_data.user_id}}/{{ profile_data.profile_photo }}">
+									<img alt="" ng-if="(profile_data.profile_photo==null||profile_data.profile_photo=='')&&(profile_data.user_fbid!=null&&profile_data.user_fbid!='')" src="https://graph.facebook.com/{{profile_data.user_fbid}}/picture?width=66&&height=66">
+									<img alt="" ng-if="(profile_data.profile_photo==null||profile_data.profile_photo=='')&&(profile_data.user_fbid==null||profile_data.user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+								</div>
+								<div class="post_comment_text post_comment_reply">
+									<div class="commentTextArea" id="comment_text"  contenteditable="true" data-text="<?php echo $this->translate('Start typing your comment here','default'); ?>.." ng-keydown="keyPress($event,'Image',mediaData.image_id);"></div>
+									<div id="hashingUsers"></div>
+									<span id="hashed_users" data-items=""></span>
+								</div>
+								<div class="clear"></div>
+								<div class="post_comment_reply-butns">
+									<span ng-if="commentAjax==1"><img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"></span>
+									<span ng-if="commentAjax==0">
+										<!-- <a ng-click="RemoveCommentWindow()" id="cancel_reply" class="default_butn_grey" href="javascript:void(0);">Cancel</a> -->
+										<a ng-click="SendComment('Image',mediaData.image_id)" class="default_butn_violet" href="javascript:void(0);"><?php echo $this->translate('Post','default'); ?></a>
+									</span>
+								</div>
+							</div>
+							<div class="clear"></div>							
+						</div>
+						<div id="event_comments" ng-init="loadcomments()">							 
+							<div class="post_comment-outer" ng-repeat="list in commentlist" id="comment_list_{{$index}}">
+								<div class="header-profile_image comment_profile-img">
+									<a href="<?php echo $this->basePath(); ?>/{{list.user_profile_name}}">
+									<img alt="" ng-if="list.profile_photo!=null&&list.profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{list.user_id}}/{{ list.profile_photo }}">
+									<img alt="" ng-if="(list.profile_photo==null||list.profile_photo=='')&&(list.user_fbid!=null&&list.user_fbid!='')" src="https://graph.facebook.com/{{list.user_fbid}}/picture?width=66&&height=66">
+									<img alt="" ng-if="(list.profile_photo==null||list.profile_photo=='')&&(list.user_fbid==null||list.user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+									</a> 
+								</div>
+								<div class="post_comment_text"  ng-if="!ifexistinEditList(list.comment_id)">
+									<span class="profile_name-comment"><a href="<?php echo $this->basePath(); ?>/{{list.user_profile_name}}">{{list.user_given_name}}</a></span>
+									<div   id="comment_content_text_{{list.comment_id}}">{{showCommentText(list.comment_content,list.comment_id)}}</div>
+									<div class="comment_likes">									 
+											<span >
+												<a ng-click="funCommentUnLikeAction('Comment',list.comment_id)" ng-if="list.islike==1" class="post_likes liked" href="javascript:void(0);">
+												<i></i></a>
+												<a ng-click="funCommentLikeAction('Comment',list.comment_id)" ng-if="list.islike!=1" class="post_likes" href="javascript:void(0);">
+												<i></i></a>
+												<span class="tootltip_outer">
+													<a  data-placement="bottom" data-toggle="tooltip" class="post_likes_count" ng-if="list.likes_count>0" ng-mouseout="unloadCommentToolTip(list.comment_id)" ng-mouseover="loadCommentToolTip(list.comment_id)" href="javascript:void(0);"  title="" ng-click="LoadLikedUsers('Comment',list.comment_id,list.likes_count,list.islike)">{{list.likes_count}} <?php echo $this->translate('likes','default'); ?></a>
+													<a  data-placement="bottom" data-toggle="tooltip" class="post_likes_count" ng-if="list.likes_count==0"   href="javascript:void(0);" title=""  ng-click="LoadLikedUsers('Comment',list.comment_id,list.likes_count,list.islike)">{{list.likes_count}} <?php echo $this->translate('likes','default'); ?></a>
+													<div style="display: none;" id="tooltip_Comment_{{list.comment_id}}" class="like_tooltip">
+														<span ng-repeat="items in list.liked_users">{{items}}</span>
+													</div>
+												</span>
+											</span>
+										 
+										<div class="post_time noti_time comment_time"><i></i>{{list.comment_time}}</div>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="post_comment_text post_comment_reply">
+									<div class="comment-edit" style="display:none" id="edit-comment-outer-{{list.comment_id}}">
+										<div>
+											
+											<div class="commentTextArea" id="editcomment_text_{{list.comment_id}}"  contenteditable="true" data-text="<?php echo $this->translate('Start typing your comment here','default'); ?>.." ng-keydown="keyPressCommentEdit($event,'Comment',list.comment_id);">
+												 
+											</div>
+											<div id="hashingUsers_Comment_{{list.comment_id}}"></div>
+											<span id="hashed_users_Comment_{{list.comment_id}}" data-items=""></span>
+																							
+										</div>
+										<div class="clear"></div>
+										<div class="post_comment_reply-butns">												 
+											<span>
+												<a ng-click="RemoveCommentEditWindow(list.comment_id)" id="cancel_reply" class="default_butn_grey" href="javascript:void(0);"><?php echo $this->translate('Cancel','default'); ?></a>
+												<a ng-click="SendEditComment(list.comment_id,$index);" class="default_butn_violet" href="javascript:void(0);"><?php echo $this->translate('Post','default'); ?></a>
+											</span>
+										</div>
+									</div>
+									<div class="clear"></div>
+									<div class="comment_actions">
+										<a class="comment_edit" ng-if="list.user_id==profile_data.user_id" href="javascript:void(0);" title="Edit" ng-click="enableCommentEdit(list.comment_id,list.comment_content);"></a>
+										<a class="comment_delete" href="javascript:void(0);" ng-if="list.allowedit==1" title="Delete" ng-click="DeleteComment(list.comment_id,$index)"></a>
+										<a class="comment_report" href="javascript:void(0);" title="Report" ng-if="list.user_id!=profile_data.user_id" ng-click="ReportPost('Comment',list.comment_id)" data-toggle="modal" data-target="#report_post" ></a>
+									</div>
+									<div class="clear"></div>
+								</div>
+								
+							</div>
+							<div><a href="javascript:void(0)"  class="loadmore-comments" ng-if="commentlist.length<=0" ><?php echo $this->translate('No comments to show','default'); ?></a></div>
+							<div>
+								<a href="javascript:void(0)" class="loadmore-comments" ng-click="loadcomments();" ng-if="mediaData.comment_count>((page-1)*10)"><?php echo $this->translate('Loadmore','default'); ?></a>	
+							</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">			
+                    <div class="post-outer border_radius">
+                    	<div class="likes_head"><?php echo $this->translate('Post Likes','default'); ?></div>
+						<div id="like_list" ng-init="loadLikeList()">
+							<div class="like_profile-outer" ng-repeat="items in likelist">
+								<div class="like_profile-img comn_profile_img">
+									<a href="<?php echo $this->basePath(); ?>/{{items.user_profile_name}}">
+									<img alt="" ng-if="items.profile_photo!=null&&items.profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{items.user_id}}/{{ items.profile_photo }}">
+									<img alt="" ng-if="(items.profile_photo==null||items.profile_photo=='')&&(items.user_fbid!=null&&items.user_fbid!='')" src="https://graph.facebook.com/{{items.user_fbid}}/picture?width=66&&height=66">
+									<img alt="" ng-if="(items.profile_photo==null||items.profile_photo=='')&&(items.user_fbid==null||items.user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+									</a>
+								</div>
+								<div class="like_profile-name">
+									<a href="<?php echo $this->basePath(); ?>/{{items.user_profile_name}}">{{items.user_given_name}}</a>	
+								</div>	 
+							</div>  
+							<div><a href="javascript:void(0)"  class="loadmore-comments" ng-if="likelist.length<=0" ><?php echo $this->translate('No likes to show','default'); ?></a></div>
+							<div><a href="javascript:void(0)" ng-click="loadLikeList()" class="loadmore-comments" ng-if="eventData.like_count>((likepage-1)*10)" ><?php echo $this->translate('Loadmore','default'); ?></a></div>								
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="pop_bg modal fade" id="likes_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog login_popup">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?php echo $this->translate('Close','default'); ?></span></button>
+            <div class="clear"></div>
+          </div>
+          <div class="modal-body signup_body">
+				<div ng-if="loadpeople==1"><img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"></div>
+          		<div class="likes_pop-outer" ng-if="loadpeople==0">
+                	<div class="like_profile-outer" ng-repeat="items in likedpeoples">
+                    	<div class="like_profile-img comn_profile_img">
+							<img alt="" ng-if="items.profile_photo!=null&&items.profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{items.user_id}}/{{ items.profile_photo }}">
+							<img alt="" ng-if="(items.profile_photo==null||items.profile_photo=='')&&(items.user_fbid!=null&&items.user_fbid!='')" src="https://graph.facebook.com/{{items.user_fbid}}/picture?width=66&&height=66">
+							<img alt="" ng-if="(items.profile_photo==null||items.profile_photo=='')&&(items.user_fbid==null||items.user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+						 
+						</div>
+                        <div class="like_profile-name"><a href="javascript:void(0);">{{items.user_given_name}}</a></div>
+                        <a href="javascript:void(0);" class="button_small_blue like_add-friend" ng-if="items.is_friend"><?php echo $this->translate('Friends','default'); ?></a>
+						<div class="like_add-friend"><a href="javascript:void(0);" class="friend_accept" ng-if="items.get_request" ng-click="acceptFriendRequest(items.user_profile_name);remove()" title="Accept request"></a>
+						<a href="javascript:void(0);" remove-on-click ng-if="items.get_request" class="friend_ignore" ng-click="rejectFriendRequest(items.user_profile_name);remove()" title="Ignore Request"></a>
+						</div>
+						<a ng-if="items.is_requested" href="javascript:void(0);" class="default_butn_grey"><?php echo $this->translate('Pending','default'); ?></a>
+						<a href="javascript:void(0);" remove-on-click ng-if="items.is_requested!= 1 && items.get_request!= 1 && items.is_friend!= 1" class="default_butn_blue" ng-click="sentFriendRequest(items.user_profile_name);remove()"><?php echo $this->translate('Add Friend','default'); ?></a>		 
+                    </div>                  
+                </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+	<div class="pop_bg modal fade" id="report_post" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog login_popup">
+        <div class="modal-content report-spam <?php echo $language_class; ?>">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?php echo $this->translate('Close','default'); ?></span></button>
+            <div class="clear"></div>
+          </div>
+          <div class="modal-body signup_body">
+			<div id="signup_step1" ng-if="ajax_loader_reportpost==1">
+				<img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"> 
+			</div>
+			<div id="signup_step1" ng-if="ajax_loader_reportpost==0">
+				<div class="error-common" id="report_error"></div>
+				<div class="success-common" id="report_success"></div>
+				<div class="step1_outer">
+					<div class="select_group-type" ng-repeat="items in reasons">			 
+                    	<input type="radio" name="spam_type" id="{{items.reason_id}}" value="{{items.reason_id}}" ng-click="selectReason(items.reason_id,items.reason)" ng-model="spam.reason_id">
+                        <label for="{{items.reason_id}}"><i class="radio-styled"></i> <i class="group-public_black"></i>{{items.reason}}</label>                       
+                        <div class="clear"></div>
+                    </div>
+					<div class="login-field" ng-if="enableReportReason==1">
+					<textarea placeholder="<?php echo $this->translate('Please type your reason','default'); ?>" ng-model="spam.otherReason"></textarea>
+					</div>
+					<div class="clear"></div>
+					<div class="signup_button"  ng-if="reportAjaxLoader==0">                        
+                         <a ng-click="sendReport(spam)" id="go_step-2" class="default_butn_blue" href="javascript:void(0);"><?php echo $this->translate('Send','default'); ?></a>
+					</div>
+					<div class="signup_button" ng-if="reportAjaxLoader==1">                        
+                       <img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"> 
+					</div>
+                        <div class="clear"></div>
+                    </div>
+					<div class="clear"></div>
+				</div> 
+			</div>
+          </div>
+          
+        </div>
+      </div>
+	  
+	<div class="pop_bg modal fade" id="feed_delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog login_popup">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only"><?php echo $this->translate('Close','default'); ?></span></button>
+            <div class="clear"></div>
+          </div>
+          <div class="modal-body signup_body">
+			<div id="signup_step1" ng-if="ajax_loader_feeddelte==1">
+				<img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"> 
+			</div>
+			<div id="signup_step1" ng-if="ajax_loader_feeddelte==0">
+				<div class="step1_outer">
+					 
+					<div ng-if="feedDeleteSystemType == 'Image'">
+						<?php echo $this->translate('Are you sure you want to remove this item?','default'); ?>
+					</div>
+					<div  class="post-butns"> 
+					<a ng-click="RemovePost(feedDeleteSystemType,DeleteFeedrow_content_id)" class="default_butn_blue" href="javascript:void(0);"><?php echo $this->translate('Yes','default'); ?></a>
+					<a ng-click="CancelRemovePost()" class="default_butn_red" href="javascript:void(0);"><?php echo $this->translate('No','default'); ?></a>
+					</div>
+					<div class="clear"></div>
+				</div> 
+			</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    </div>
+ </div>
+   <div id="mediaview_dialog" title="" style="display:none"></div>
+ <style>
+  [contentEditable=true]:empty:not(:focus):before{
+        content:attr(data-text)
+    }
+  .google-map{width:100%; height:100%;}
+ </style>
+ <script type="text/javascript" src="<?php echo $this->basePath(); ?>/public/js/jquery.slimscroll.js"></script>
+ <script>
+ var enableHashing = 0;
+ var str_search = ''; 
+ var hashedUser = [];
+ var page = 1;
+ var rsvppage=1;
+ var likepage = 1;
+ var media_app = angular.module('media_app',[]);
+		media_app.config(function ($httpProvider) {
+			$httpProvider.defaults.transformRequest = function(data){
+				if (data === undefined) {
+					return data;
+				}
+				return $.param(data);
+			}
+		});
+		 
+	media_app.directive('helloMaps', function ($timeout) {
+
+      
+     return function (scope, elem, attrs) {
+		   $timeout(function(){
+             var mapOptions,
+          latitude = attrs.latitude,
+          longitude = attrs.longitude,
+		  location = attrs.location,
+		  going = attrs.going,
+          map;		  
+        latitude = latitude && parseFloat(latitude, 10) || 43.074688;
+        longitude = longitude && parseFloat(longitude, 10) || -89.384294;
+        mapOptions = {
+          zoom: 8,
+          center: new google.maps.LatLng(latitude, longitude)
+        };
+		
+        map = new google.maps.Map(elem[0], mapOptions);
+		if(going==1){
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(latitude, longitude),
+				icon: baseurl+"/public/images/map_pin-blue.svg",
+				title:location
+			});
+		}else{
+			var marker = new google.maps.Marker({
+				position: new google.maps.LatLng(latitude, longitude),
+				icon: baseurl+"/public/images/map_pin.svg",
+				title:location
+			});
+		}
+		// To add the marker to the map, call setMap();
+		marker.setMap(map);
+		google.maps.event.trigger(map, 'resize'); 
+         }, 3000);
+        
+      };
+    }); 
+	media_app.controller('mediaController',function($scope, $http,$compile){
+		$scope.mediaData = <?php echo json_encode($arr_group_media); ?>;
+		$scope.profile_data = <?php echo json_encode($profile_data); ?>;
+		$scope.likeAjax=0;
+		$scope.load_commentbox = 0;
+		$scope.commentAjax = 0;
+		$scope.ucomments = '';
+		$scope.commentlist = '';
+		$scope.likelist = [];
+		$scope.page = 1;		 
+		$scope.likepage =1;
+		$scope.likedpeoples = [];
+		$scope.commenteditEnableList = [];
+		$scope.funLikeAction = function(system_type,content_id){			 
+			$scope.likeAjax=1;
+			url  = baseurl+'/like/likes';				 
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id,		 
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					$scope.likeAjax=0;
+					$scope.mediaData.like_count = data.return_array.like_count;
+					$scope.mediaData.is_liked = 1;
+					$scope.mediaData.arr_likedUsers =data.return_array.liked_users;	
+					likepage = 1;
+					$scope.loadLikeList();
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();
+					$scope.likeAjax=0;
+				}				     
+			}).error(function(data, status, headers, config) {
+				$("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");				 
+				$( "#mediaview_dialog" ).dialog();
+			});
+			 
+		}
+		$scope.funUnLikeAction = function(system_type,content_id){
+			$scope.likeAjax=1;
+			url  = baseurl+'/like/unlikes';				 
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id,		 
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){					 
+					$scope.likeAjax=0;
+					$scope.mediaData.like_count = data.return_array.like_count;
+					$scope.mediaData.is_liked = 0;
+					$scope.mediaData.arr_likedUsers =data.return_array.liked_users;	
+					likepage = 1;
+					$scope.loadLikeList();
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();					
+					$scope.likeAjax=0;				
+				}				     
+			}).error(function(data, status, headers, config) {
+				 $("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+				 $( "#mediaview_dialog" ).dialog();
+			});
+			 
+		}
+		$scope.LoadCommentWindow = function(){
+			if($scope.load_commentbox == 1){
+				$scope.load_commentbox = 0;
+			}else{$scope.load_commentbox = 1;}
+		}
+		$scope.RemoveCommentWindow = function(){
+			$scope.ucomments = '';
+			$("#comment_text").val('');
+			$scope.load_commentbox = 0;
+		}
+		 
+		$scope.loadcomments = function(){			
+			$('#event_comments').slimScroll({
+				height: '350px',color: '#00f'
+			});		 
+			url  = baseurl+'/comment/getComments';
+			var system_type = 'Image';
+			var content_id = $scope.mediaData.image_id;
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id,page:page,
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					if(page==1){
+						$scope.commentlist = data.return_array.comments;
+					}else{						 
+						$scope.commentlist = $.merge($scope.commentlist, data.return_array.comments);						 			 
+					}
+					page++;	
+					$scope.page =page;					
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();					
+				}				     
+			}).error(function(data, status, headers, config) {
+				$("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+				$( "#mediaview_dialog" ).dialog();
+			});			
+		}
+		 
+		$scope.loadLikeList = function(){
+			$('#like_list').slimScroll({
+				height: '350px',color: '#00f'
+			});
+			url  = baseurl+'/like/likelist';
+			var system_type = 'Image';
+			var content_id = $scope.mediaData.image_id;
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id,page:likepage,
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					if(likepage==1){
+						$scope.likelist =  data.return_array.likelist;
+					}else{						 
+						$scope.likelist = $.merge($scope.likelist, data.return_array.likelist);						 			 
+					}
+					likepage++;	
+					$scope.likepage =likepage;		 
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);	
+					$( "#mediaview_dialog" ).dialog();
+				}				     
+			}).error(function(data, status, headers, config) {
+				$("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+				$( "#mediaview_dialog" ).dialog();
+			});
+		}	 
+		$scope.funCommentLikeAction = function(system_type,content_id){			 
+			 
+			url  = baseurl+'/like/likes';				 
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id,		 
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					var array_index = $scope.getArrayIndex($scope.commentlist,'comment_id',content_id);
+					 
+					$scope.commentlist[array_index].likes_count = data.return_array.like_count;
+					$scope.commentlist[array_index].islike = 1;
+					$scope.commentlist[array_index].liked_users =data.return_array.liked_users;	
+					 
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();					
+					$scope.likeAjax=0;
+				}				     
+			}).error(function(data, status, headers, config) {
+				 $("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+				 $( "#mediaview_dialog" ).dialog();
+			});
+			 
+		}
+		$scope.funCommentUnLikeAction = function(system_type,content_id){
+			 
+			url  = baseurl+'/like/unlikes';				 
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id,		 
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){					 
+					var array_index = $scope.getArrayIndex($scope.commentlist,'comment_id',content_id);
+					 
+					$scope.commentlist[array_index].likes_count = data.return_array.like_count;
+					$scope.commentlist[array_index].islike = 0;
+					$scope.commentlist[array_index].liked_users =data.return_array.liked_users;	
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();
+					$scope.likeAjax=0;				
+				}				     
+			}).error(function(data, status, headers, config) {
+				 $("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+				 $( "#mediaview_dialog" ).dialog();
+			});
+			 
+		}
+		$scope.getArrayIndex = function(arr_elemnt,key,item){ 
+			var incexist = -1;
+			for(i=0;i<arr_elemnt.length;i++) {
+				if(arr_elemnt[i][key] == item){incexist = i;}
+			}
+			return incexist;
+		}
+		$scope.unloadCommentToolTip = function(comment_id){
+			$("#tooltip_Comment_"+comment_id).hide();
+		}
+		$scope.loadCommentToolTip = function(comment_id){
+			$("#tooltip_Comment_"+comment_id).show();
+		}
+		$scope.LoadLikedUsers = function(system_type,content_id,like_count,is_liked){
+			 $scope.likedpeoples = [];
+			 if(like_count ==1&&is_liked==1){
+				return true;
+			 }
+			 if(like_count > 0){
+				$scope.loadpeople = 1;
+				$('#likes_popup').modal();
+				 
+				url  = baseurl+'/like/userslist';				 
+				$http.post(url,
+				{	
+					system_type:system_type,content_id:content_id,		 
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					if(data.return_array.process_status == 'success'){
+						$scope.loadpeople = 0;
+						$scope.likedpeoples = data.return_array.liked_users;
+					}else{
+						$("#mediaview_dialog").html(data.return_array.process_info);
+						$( "#mediaview_dialog" ).dialog();						
+					}				     
+				}).error(function(data, status, headers, config) {
+					 $("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+					$( "#mediaview_dialog" ).dialog();
+				});
+			 }
+		}
+		$scope.getYouTubeIdFromURL = function(url){ 
+			var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]{11,11}).*/;
+			var match = url.match(regExp);
+			if (match) if (match.length >= 2) return match[2];
+			return false;
+		}
+		$scope.loadYoutubeVideo = function(video_id){
+			 $("#video_content").html('<iframe style="overflow:hidden;height:350px;width:100%" width="100%" height="100%" src="http://www.youtube.com/embed/'+video_id+'" frameborder="0" allowfullscreen></iframe>');
+		}
+		$scope.loadVideoContent = function(videoContent){ 
+			var video_id = $scope.getYouTubeIdFromURL(videoContent);
+			if(video_id!=''){ 
+				$scope.loadYoutubeVideo(video_id);
+			}
+		}
+		$scope.enableCommentEdit = function(comment_index,comment){
+			var array_index = $scope.getArrayIndexEdit($scope.commenteditEnableList,comment_index);
+			if(array_index==-1){
+				$scope.commenteditEnableList.push(comment_index);
+				loadcommentEdit(comment_index,comment);
+			}
+		}
+		$scope.ifexistinEditList = function(comment_index){
+			var exist_flag= 0;
+			angular.forEach($scope.commenteditEnableList, function(dataset){
+				if(dataset == comment_index){exist_flag++;}
+			});
+			if(exist_flag == 0){return false;}else{return true;}
+		}
+		$scope.RemoveCommentEditWindow = function(comment_index){
+			var array_index = $scope.getArrayIndexEdit($scope.commenteditEnableList,comment_index);
+			$scope.commenteditEnableList.splice( array_index, 1 );		
+		}		 
+		$scope.getArrayIndexEdit = function(arr_elemnt,item){ 
+			var incexist = -1;
+			for(i=0;i<arr_elemnt.length;i++) {
+				if(arr_elemnt[i] == item){incexist = i;}
+			}
+			return incexist;
+		}
+		$scope.SendEditComment = function(comment_id,comment_index){
+			var edited_comment = $("#editcomment_text_"+comment_id).val();
+			if(edited_comment==''){
+				$("#mediaview_dialog").html("<?php echo $this->translate('Type your comments to submit','default'); ?>");
+				$( "#mediaview_dialog" ).dialog();
+			}else{
+				url  = baseurl+'/comment/editComment';
+				$http.post(url,
+				{	
+					edited_comment:edited_comment,comment_id:comment_id,		 
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					if(data.return_array.process_status == 'success'){
+						var array_index = $scope.getArrayIndex($scope.commentlist,'comment_id',comment_id);
+						$scope.commentlist[array_index].comment_content = edited_comment;
+						$scope.RemoveCommentEditWindow(comment_index);
+					}else{
+						$("#mediaview_dialog").html(data.return_array.process_info);
+						$( "#mediaview_dialog" ).dialog();						
+					}				     
+				}).error(function(data, status, headers, config) {
+					 $("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+					 $( "#mediaview_dialog" ).dialog();
+				});
+				
+			}
+		}
+		$scope.DeleteComment = function(comment_id,comment_index){
+			 
+			url  = baseurl+'/comment/deleteComment';
+			$http.post(url,
+			{	
+				comment_id:comment_id,		 
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					var array_index = $scope.getArrayIndex($scope.commentlist,'comment_id',comment_id);
+					 
+					$scope.commentlist.splice( array_index, 1 );	
+					$scope.RemoveCommentEditWindow(comment_index);
+					$("#comment_list_"+comment_index).remove();
+					$scope.mediaData.comment_counts = $scope.mediaData.comment_counts-1;
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();					
+				}				     
+			}).error(function(data, status, headers, config) {
+				 $("#mediaview_dialog").html("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+				 $( "#mediaview_dialog" ).dialog();
+			});
+				
+			 
+		}
+		$scope.keyPress = function(event,system_type,content_id){			
+			if(event.which == 50){
+				if(event.shiftKey) {
+					
+					enableHashing = 1;
+					str_search ='';
+				}
+			}
+			if(enableHashing){ 
+				if(event.which != 50){
+					str_search = str_search+String.fromCharCode(event.keyCode);
+				}
+				$scope.getFriends(str_search,system_type,content_id);
+			}
+		}
+		$scope.getFriends =function(str_search,system_type,content_id){
+			url  = baseurl+'/user/getFriends';
+			$http.post(url,
+				{	
+					str_search:str_search,		 
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					if(data.return_array.process_status == 'success'){
+						if(data.return_array.arrFriends.length>0){
+							var hasusers = '<ul class="hashUserList">';
+							angular.forEach(data.return_array.arrFriends, function(dataset){				
+								hasusers+= '<li><a href="javascript:void(0)" ng-click="addTOhashed(\''+system_type+'\','+content_id+',\''+dataset.user_profile_name+'\','+dataset.user_id+',\''+dataset.user_given_name+'\')">';
+								if(dataset.profile_photo!=''&&dataset.profile_photo!=null){
+								   hasusers += '<img  src="<?php echo $this->basePath(); ?>/public/datagd/profile/'+dataset.user_id+'/'+dataset.profile_photo+'">';
+								 }else if((dataset.profile_photo==''||dataset.profile_photo==null)&&(dataset.user_fbid!=''&&dataset.user_fbid!=null)){
+										hasusers += '<img alt="" src="https://graph.facebook.com/'+dataset.user_fbid+'/picture?width=66&&height=66">';
+								 }else{ hasusers += '<img  src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">';}
+								hasusers += dataset.user_given_name;
+								hasusers+= '</a>';
+								hasusers+= '</li>';
+							});
+							hasusers+= '</ul>';
+							$("#hashingUsers").html($compile(hasusers)($scope));
+						}else{
+							$("#hashingUsers").html('');
+							str_search = '';
+							enableHashing=0;
+						}						
+					}
+				}).error(function(data, status, headers, config) {
+					// alert("Error occured. Please try again");
+				});
+		}
+		$scope.addTOhashed = function(system_type,content_id,profilename,user_id,user_given_name){			 
+			commentText=$("#comment_text").html();
+			str_search = str_search.toLowerCase();
+			text = commentText.replace('@'+str_search,'<a class="hashed_user" id="hashed_user_'+user_id+'" contentEditable="false"  href="<?php echo $this->basePath(); ?>/'+profilename+'">'+user_given_name+'</a>&nbsp;'); 
+			$("#comment_text").html(text);
+			$("#hashingUsers").html('');
+			$("#hashingUsers").focus();
+			var selectedhashusers = $("#hashed_users").attr("data-items");
+			if(selectedhashusers!=''){
+				selectedhashusers=selectedhashusers+'.'+user_id;
+			}else{selectedhashusers=user_id;}
+			$("#hashed_users").attr("data-items",selectedhashusers);			 
+			//hashedUser.push(user_id);
+			str_search = '';
+			enableHashing=0;			 
+		}
+		$scope.SendComment = function(system_type,content_id){ 
+			
+			commentText=$("#comment_text").html();	 
+			$scope.commentText=commentText;
+			var selectedhashusers = $("#hashed_users").attr("data-items");
+			hashedUser = selectedhashusers.split('.');
+			for(i=0;i<hashedUser.length;i++){
+			 var term = 'hashed_user_'+hashedUser[i];
+			 var index = $scope.commentText.indexOf(term);
+			 if(index == -1){
+				hashedUser.splice( i, 1 );		
+			 }
+			}
+			if($scope.commentText!=''){
+				$scope.commentAjax = 1;
+				url  = baseurl+'/comment/comments';
+				$http.post(url,
+				{	
+					system_type:system_type,content_id:content_id,txt_comment:$scope.commentText,hashedUser:hashedUser		 
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					$scope.commentAjax = 0;
+					if(data.return_array.process_status == 'success'){
+						page=1;
+						$scope.loadcomments();
+						$scope.commentAjax = 0;
+						$scope.mediaData.comment_counts = data.return_array.comment_count;
+						$scope.mediaData.is_commented =1;	
+						$scope.ucomments = '';
+						$("#comment_text").val('');
+						$("#comment_text").html('');	
+						$("#hashed_users").attr("data-items",'');
+						hashedUser=[];
+					}else{
+						$("#mediaview_dialog").html(data.return_array.process_info);
+						$("#mediaview_dialog").dialog();
+					}	 			     
+				}).error(function(data, status, headers, config) {
+					// alert("Error occured. Please try again");
+				});
+			}else{			 
+				$("#mediaview_dialog").html("<?php echo $this->translate('Please add some content before submitting','default'); ?>");
+				$("#mediaview_dialog").dialog();
+				//$("#comment_"+system_type+'_'+content_id+" .post_comment_reply-butns").html($compile(buttn_content)($scope));
+			}
+		}
+		$scope.showCommentText = function(content,id){
+			$("#comment_content_text_"+id).html(content);
+		}
+		$scope.keyPressCommentEdit = function(event,system_type,content_id){			
+			if(event.which == 50){
+				if(event.shiftKey) {					
+					enableHashing = 1;
+					str_search ='';
+				}
+			}
+			if(enableHashing){ 
+				if(event.which != 50){
+					str_search = str_search+String.fromCharCode(event.keyCode);
+				}
+				$scope.getFriendsCommentEdit(str_search,system_type,content_id);
+			}
+		}
+		$scope.getFriendsCommentEdit=function(str_search,system_type,content_id){
+			url  = baseurl+'/user/getFriends';
+			$http.post(url,
+				{	
+					str_search:str_search,		 
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					if(data.return_array.process_status == 'success'){
+						if(data.return_array.arrFriends.length>0){
+							var hasusers = '<ul class="hashUserList">';
+							angular.forEach(data.return_array.arrFriends, function(dataset){				
+								hasusers+= '<li><a href="javascript:void(0)" ng-click="addTOhashedCommentedit(\''+system_type+'\','+content_id+',\''+dataset.user_profile_name+'\','+dataset.user_id+',\''+dataset.user_given_name+'\')">';
+								if(dataset.profile_photo!=''&&dataset.profile_photo!=null){
+								   hasusers += '<img  src="<?php echo $this->basePath(); ?>/public/datagd/profile/'+dataset.user_id+'/'+dataset.profile_photo+'">';
+								 }else if((dataset.profile_photo==''||dataset.profile_photo==null)&&(dataset.user_fbid!=''&&dataset.user_fbid!=null)){
+										hasusers += '<img alt="" src="https://graph.facebook.com/'+dataset.user_fbid+'/picture?width=66&&height=66">';
+								 }else{ hasusers += '<img  src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">';}
+								hasusers += dataset.user_given_name;
+								hasusers+= '</a>';
+								hasusers+= '</li>';
+							});
+							hasusers+= '</ul>';
+							$("#hashingUsers_"+system_type+"_"+content_id).html($compile(hasusers)($scope));
+						}else{
+							$("#hashingUsers_"+system_type+"_"+content_id).html('');
+							str_search = '';
+							enableHashing=0;
+						}						
+					}
+				}).error(function(data, status, headers, config) {
+					// alert("Error occured. Please try again");
+				});
+		}
+		$scope.addTOhashedCommentedit = function(system_type,content_id,profilename,user_id,user_given_name){ 
+			 
+				commentText=$("#editcomment_text_"+content_id).html();
+				str_search = str_search.toLowerCase();
+				text = commentText.replace('@'+str_search,'<a class="hashed_user" id="hashed_user_'+user_id+'" contentEditable="false"  href="<?php echo $this->basePath(); ?>/'+profilename+'">'+user_given_name+'</a>&nbsp;'); 
+				$("#editcomment_text_"+content_id).html(text);
+				$("#hashingUsers_"+system_type+"_"+content_id).html('');
+				$("#hashingUsers_"+system_type+"_"+content_id).focus();
+				var selectedhashusers = $("#hashed_users_"+system_type+"_"+content_id).attr("data-items");
+				if(selectedhashusers!=''){
+					selectedhashusers=selectedhashusers+'.'+user_id;
+				}else{selectedhashusers=user_id;}
+				$("#hashed_users_"+system_type+"_"+content_id).attr("data-items",selectedhashusers);			 
+				//hashedUser.push(user_id);
+				str_search = '';
+				enableHashing=0;	 
+		}
+		$scope.SendEditComment = function(comment_id,array_index){  
+			var  system_type = 'Comment';
+			var edited_comment = $("#editcomment_text_"+comment_id).html();
+			var selectedhashusers = $("#hashed_users_"+system_type+"_"+comment_id).attr("data-items");
+			hashedUser = selectedhashusers.split('.');
+			for(i=0;i<hashedUser.length;i++){
+			 var term = 'hashed_user_'+hashedUser[i];
+			 var index =edited_comment.indexOf(term);
+			 if(index == -1){
+				hashedUser.splice( i, 1 );		
+			 }
+			}
+			if(edited_comment==''){
+				$("#mediaview_dialog").html("<?php echo $this->translate('Please add some content before submitting','default'); ?>");
+				$("#mediaview_dialog").dialog();
+			}else{
+				url  = baseurl+'/comment/editComment';
+				$http.post(url,
+				{	
+					edited_comment:edited_comment,comment_id:comment_id,hashedUser:hashedUser,	 
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					
+					if(data.return_array.process_status == 'success'){
+					$("#edit-comment-outer-"+comment_id).hide();
+					$("#hashed_users_Comment_"+comment_id).attr("data-items",'');							
+						$scope.commentlist[array_index].comment_content = edited_comment;						 
+						$scope.RemoveCommentEditWindow(comment_id);						 
+					}else{
+						$("#mediaview_dialog").html(data.return_array.process_info);
+						$("#mediaview_dialog").dialog();				 					
+					}				     
+				}).error(function(data, status, headers, config) {
+					// alert("Error occured. Please try again");
+				});
+				
+			}
+		}
+		$scope.RemoveCommentEditWindow = function(comment_index){
+			var array_index = $scope.getArrayIndexEdit($scope.commenteditEnableList,comment_index); 
+			$scope.commenteditEnableList.splice( array_index, 1 );	
+			$("#edit-comment-outer-"+comment_index).hide();
+			$("#hashed_users_Comment_"+comment_index).attr("data-items",'');
+		 
+			hashedUser=[];
+		}
+		$scope.reasons= [];
+		$scope.ajax_loader_reportpost = 1;
+		$scope.reportSelectedContentId = '';
+		$scope.reportSelectedContentType = '';
+		$scope.selectedReasonId='';
+		$scope.selectedReasonType='';
+		$scope.enableReportReason=0;;
+		$scope.reportAjaxLoader =0;
+		$scope.spam={};
+		$scope.ReportPost = function(type,content_id){
+			$scope.ajax_loader_reportpost = 1;
+			$scope.reasons= [];
+			$scope.reportSelectedContentId = content_id;
+			$scope.reportSelectedContentType = type;
+			url  = baseurl+'/spam/getreasons';
+			$http.post(url,
+			{	
+				type:type,content_id:content_id
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					$scope.reasons=data.return_array.reasons;
+					$scope.ajax_loader_reportpost = 0;
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();					
+					$("#report_post").modal("hide");
+				}				     
+			}).error(function(data, status, headers, config) {
+				// alert("Error occured. Please try again");
+			});	
+		}
+		$scope.selectReason = function(reason_id,reasontype){
+			$scope.selectedReasonId=reason_id;
+			$scope.selectedReasonType=reasontype;
+			if(reasontype == 'Other'){
+				$scope.enableReportReason=1;
+			}else{
+				$scope.enableReportReason=0;
+			}
+		}
+		$scope.sendReport = function(frmspam){
+			$("#report_success").html("");
+			$("#report_success").fadeOut();
+			if($scope.user_selectedReasonType == ''){
+				$("#report_error").html("<?php echo $this->translate('Select one reason','default'); ?>");
+				$("#report_error").fadeIn("slow");
+			}else if($scope.user_selectedReasonType == 'Other'&&frmspam.otherReason=='' ){
+				$("#report_error").html("<?php echo $this->translate('Please enter a reason','default'); ?>");
+				$("#report_error").fadeIn("slow");
+			}else{
+				url  = baseurl+'/spam/sentreport';
+				$scope.reportAjaxLoader =1;
+				$http.post(url,
+				{	
+					type:$scope.reportSelectedContentType,content_id:$scope.reportSelectedContentId,reason_id:frmspam.reason_id,otherReason:frmspam.otherReason
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					$scope.reportAjaxLoader =0;
+					if(data.return_array.process_status == 'success'){
+						$("#report_success").html("<?php echo $this->translate('The  report is successfully submited','default'); ?>");
+						$("#report_success").fadeIn('slow');
+						$scope.spam={};
+						//$("#report_post").modal("hide");
+					}else{
+						$("#report_error").html(data.return_array.process_info);
+						$("#report_error").fadeIn("slow");
+						//$("#report_post").modal("hide");
+					}				     
+				}).error(function(data, status, headers, config) {
+					$scope.reportAjaxLoader =0;
+					// alert("Error occured. Please try again");
+				});	
+			}
+		}
+		$scope.EditFeedMediaContent = [];
+		 
+		 
+		$scope.feedEditSystemType='';
+		$scope.ajax_loader_feededit = 1;
+		 
+		$scope.editLocation ='';
+		$scope.editFeed =function(system_type,content_id){
+			$scope.ajax_loader_feededit = 1
+			url  = baseurl+'/groups/getoneFeed';
+			$scope.feedEditSystemType=system_type;
+			 
+			$http.post(url,
+			{	
+				system_type:system_type,content_id:content_id
+			},
+			{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+			).success(function(data, status, headers, config) {
+				if(data.return_array.process_status == 'success'){
+					$scope.ajax_loader_feededit =0;
+					if(system_type == 'Media'){
+						$scope.EditFeedMediaContent = data.return_array.feed_details;
+					}
+				}else{
+					$("#mediaview_dialog").html(data.return_array.process_info);
+					$( "#mediaview_dialog" ).dialog();
+				}				     
+			}).error(function(data, status, headers, config) {
+				// alert("Error occured. Please try again");
+			});
+		}
+		$scope.UpdateStatus = function(system_type,content_id){
+				var caption = $("#feed_edit_caption").val();
+				url  = baseurl+'/groups/editMedia';					 
+				$http.post(url,
+				{	
+					system_type:system_type,content_id:content_id,content:caption
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					if(data.return_array.process_status == 'success'){
+						$("#feed_edit_success").html("<?php echo $this->translate('Sucessfully Updated your post','default'); ?>");
+						$("#feed_edit_success").fadeIn("Slow");
+						$scope.mediaData.media_caption = caption;
+						//$("#feed_edit").modal("hide");
+					}else{
+						$("#feed_edit_error").html(data.return_array.process_info);
+						$("#feed_edit_error").fadeIn("Slow");		 					
+					}				     
+				}).error(function(data, status, headers, config) {
+					// alert("Error occured. Please try again");
+				});
+		}
+		$scope.ajax_loader_feeddelte = 1;
+		$scope.deleteFeed =function(system_type,content_id){
+			$scope.ajax_loader_feeddelte = 0;			 
+			$scope.feedDeleteSystemType=system_type;			 
+			$scope.DeleteFeedrow_content_id = content_id;
+			 
+			$("#errordeletePost").fadeOut("slow");
+			 
+			  
+		}
+		$scope.CancelRemovePost = function(){
+			$scope.feedDeleteSystemType='';
+			$scope.ajax_loader_feeddelte = 1;
+			
+			
+			$("#feed_delete").modal("hide");
+			 
+			$("#errordeletePost").fadeOut("slow");
+			 
+		}
+		$scope.RemovePost = function(system_type,content_id,row_count,row_index){
+			url  = '';
+			 
+			if(system_type == 'Image'){
+				url  = baseurl+'/groups/deleteImage';		
+			}
+			 
+			if(url != ''){				 				 
+				$http.post(url,
+				{	
+					system_type:system_type,content_id:content_id
+				},
+				{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}	
+				).success(function(data, status, headers, config) {
+					if(data.return_array.process_status == 'success'){					 
+						 
+						if(system_type == 'Image'){
+							window.location.href=baseurl+'/groups/'+$scope.mediaData.group_seo_title;	
+						}						 
+						 
+						$("#feed_delete").modal("hide");
+					}else{
+						$("#errordeletePost").html(data.return_array.process_info);
+						$("#errordeletePost").fadeIn("slow");	 					
+					}				     
+				}).error(function(data, status, headers, config) {
+					// alert("Error occured. Please try again");
+				});	
+			}
+		}
+	});
+	angular.element(document).ready(function() {
+		 
+		angular.bootstrap(document.getElementById("media_view"), ["media_app"]);	
+	});
+	function unloadToolTip(){
+		$("#tooltip_activity").hide();
+	}
+	function loadToolTip(){
+		$("#tooltip_activity").show();
+	}
+	function unloadToolTip(){
+		$("#tooltip_activity").hide();
+	}
+	 function loadcommentEdit(comment_id,comment){ 
+		$("#edit-comment-outer-"+comment_id).show();
+		$("#editcomment_text_"+comment_id).html(comment);
+		$("#editcomment_text_"+comment_id).attr('contenteditable','true');
+	 }
+	
+ </script>

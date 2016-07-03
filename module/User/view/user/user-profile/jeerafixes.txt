@@ -1,0 +1,20 @@
+login link color
+forgot password style
+name not updating while profile edit (top name)
+
+scroll bar on explore filter
+
+questionnaire title and style
+intrest tag style
+category icon spacing
+chcnge text on pending request button
+reduce shadow intensity of cover picture
+facebook login for unactive members
+0 comments and 0 likes in feeds
+feed map pin based on going or not
+play button for youtube image
+comment wants to show after commented
+more comment style
+tooltip style
+map i am going not going in top map
+remove number of members from search

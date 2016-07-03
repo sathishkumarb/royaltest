@@ -1,0 +1,657 @@
+<?php 
+if (defined('RUNNING_FROM_ROOT')) {
+  //$this->plugin('basePath')->setBasePath($this->basePath().'/public');
+}
+?>
+<?php echo $this->doctype(); ?> 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head>
+        <meta charset="utf-8">
+		<title>Jeera</title>
+		<?php // echo $this->headTitle('Jeera')->setSeparator(' - ')->setAutoEscape(false); ?>
+        <?php echo $this->headMeta()->appendName('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1'); ?>
+		<?php echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/favicon.icon', 'href' => $this->basePath() . '/public/images/favicon.ico'))
+   						->appendStylesheet($this->basePath() . '/public/css/bootstrap.css')
+						->appendStylesheet($this->basePath() . '/public/css/styles.css')	
+						->appendStylesheet($this->basePath() . '/public/css/responsive.css')
+						->appendStylesheet($this->basePath() . '/public/css/jquery-ui.css')
+						->appendStylesheet($this->basePath() . '/public/css/salvattore.css'); ?>
+		<?php $this->HeadScript()->prependFile($this->basePath().'/public/js/jquery-ui.js','text/javascript'); ?>
+		<?php $this->HeadScript()->prependFile($this->basePath().'/public/js/jquery-1.11.1.min.js','text/javascript'); ?>
+		<?php $this->HeadScript()->appendFile($this->basePath().'/public/js/bootstrap.js','text/javascript'); ?>
+		<?php $this->HeadScript()->appendFile($this->basePath().'/public/js/modernizr.js','text/javascript'); ?>
+		<?php $this->HeadScript()->appendFile($this->basePath().'/public/js/salvattore.min.js','text/javascript'); ?>
+        <?php $this->HeadScript()->appendFile($this->basePath().'/public/js/jquery-migrate-1.0.0.js','text/javascript'); ?>
+        <?php $this->HeadScript()->appendFile($this->basePath().'/public/js/jquery.iframe-transport.js','text/javascript'); ?>
+        <?php $this->HeadScript()->appendFile($this->basePath().'/public/js/jquery.fileupload.js','text/javascript'); ?>
+		<?php echo $this->headScript(); ?>	
+		<script>var baseurl = '<?php echo $this->basePath(); ?>'</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+		<link type="text/css" href="http://dev.jeera.me/cometchat/cometchatcss.php" rel="stylesheet" charset="utf-8">
+		<script type="text/javascript" src="http://dev.jeera.me/cometchat/cometchatjs.php" charset="utf-8"></script>
+		<?php if($locales_selected=='ar_AE'){
+			?>
+			<link href="<?php echo $this->basePath(); ?>/public/css/bootstrap-rtl.min.css" media="screen" rel="stylesheet" type="text/css">
+			<link href="<?php echo $this->basePath(); ?>/public/css/style_ar.css" media="screen" rel="stylesheet" type="text/css">
+			<?php
+		} ?>
+		<?php 
+	if($locales_selected=='ar_AE'){
+		$language_class="ar";
+	}else{
+		$language_class="en";
+	}	 
+?>
+	</head>
+    <body> 
+		
+		<div id="page_main_loadHtml">
+			<div id="layout-top" class="jeera-fixed-header <?php echo $language_class; ?>" ng-app="profile-top" ng-cloak>
+				<div ng-controller="profileTopController">
+					<div class="warning-common header-error-inner" id="user_status_activate" style="display:none">
+						<div ng-if="varificationprocess==1"><i></i><?php echo $this->translate('Your account is not yet verified','default'); ?> .. 
+							<a href="javascript:void(0);" ng-click="varifyAccount()"><?php echo $this->translate('click here to resend the verification mail','default'); ?></a>
+						</div>
+						<div ng-if="varificationprocess==2">
+							<img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif">
+						</div>
+						<div ng-if="varificationprocess==3">
+						<?php echo $this->translate('Verification code is sent. Please check your email and follow the instructions.','default'); ?>							
+						</div>
+					</div>
+					<div class="header-fixed-inner">
+						<div class="fixed-logo">
+							<a href="{{baseurl}}"><img src="<?php echo $this->basePath(); ?>/public/images/jeera-logo-2.svg" alt="" /></a>
+						</div>
+						<div class="fixed-menu">
+							<ul>
+								<li><a href="{{baseurl}}/explore" ng-class="{'active':action == 'explore'}"><?php echo $this->translate('Explore','default'); ?></a></li>
+								<li><a href="{{baseurl}}/feeds" ng-class="{'active':action == 'feeds'}"><?php echo $this->translate('My Feed','default'); ?></a></li>
+							</ul>
+						</div>
+						<div class="fixed-search">
+							<input name="search" class="txt_quicksearch" type="text" ng-model="searchjeera" placeholder="<?php echo $this->translate('Search Jeera','default'); ?>..." ng-keyup="Search(searchjeera)" data-toggle="dropdown" id="searchlist" />
+							<div  style="display:none" class="dropdown-menu spotsearchresult" role="menu" aria-labelledby="searchlist">
+								<div ng-if="ajaxSearchFlag==1"><img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"></div>
+								<div ng-if="ajaxSearchFlag==0"> 
+									<div class="notification_nor" ng-repeat="items in userInfo">
+										<a href="<?php echo $this->basePath(); ?>/{{items.user_profile_name}}">
+											<div class="noti_user-img">
+												<img alt="" ng-if="items.profile_photo!=null&&items.profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{items.user_id}}/{{ items.profile_photo }}">
+												<img alt="" ng-if="(items.profilephoto==null||items.profilephoto=='')&&(items.user_fbid!=null&&items.user_fbid!='')" src="https://graph.facebook.com/{{items.user_fbid}}/picture?width=66&&height=66">
+												<img alt="" ng-if="(items.profilephoto==null||items.profilephoto=='')&&(items.user_fbid==null||items.user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+											</div>
+											<div class="noti_text">
+												<span class="search_user_name">{{items.user_given_name}}</span>
+												<span ng-if="(items.city_name)" class="search_list_location">
+													<i class="group-location"></i>{{items.city_name}}, {{items.country_code}}
+												</span>
+											</div>
+										</a>
+										<div class="clear"></div>					
+									</div>
+									<div class="notification_nor" ng-repeat="items in groupInfo">
+										<a ng-href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}">
+											<div class="noti_group-img">
+												<img ng-if="items.group_photo_photo!=''&&items.group_photo_photo!=null" src="<?php echo $this->basePath(); ?>/public/datagd/group/{{items.group_id}}/medium/{{items.group_photo_photo}}" alt="" />
+												<img ng-if="items.group_photo_photo==''||items.group_photo_photo==null" src="<?php echo $this->basePath(); ?>/public/images/group-img_def.jpg" alt="" />
+											</div>
+											<div class="noti_text">
+												<span class="search_group_title">{{items.group_title}}</span>
+												<span ng-if="items.group_type =='open'" class="search_list_grouptype"><i class="grouptype_open"></i><?php echo $this->translate('Open Group','default'); ?></span>
+												<span ng-if="items.group_type =='private'" class="search_list_grouptype"><i class="grouptype_private"></i><?php echo $this->translate('Private Group','default'); ?></span>
+												<span ng-if="items.group_type =='public'" class="search_list_grouptype"><i class="grouptype_public"></i><?php echo $this->translate('Public Group','default'); ?></span>
+												<span ng-if="(items.city)" class="search_list_group_location"><i class="group-location"></i>{{items.city}}, {{items.country_code}}</span>
+											</div>
+										</a>
+										<div class="clear"></div>
+									</div>
+								</div>
+								<div class="more_notification"><a href="<?php echo $this->basePath(); ?>/search?str={{searchjeera}}" ><?php echo $this->translate('Show more','default'); ?></a></div>
+							</div>
+						</div>
+						<div class="fixed-right">
+							<div class="fixed-myprofile">
+								<span class="vertical_align"></span>
+								<div class="header-profile_image">
+									<a href="{{baseurl}}/{{profilename}}">
+										<img alt="" ng-if="profilephoto!=null&&profilephoto!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{user_id}}/{{ profilephoto }}">
+										<img alt="" ng-if="(profilephoto==null||profilephoto=='')&&(user_fbid!=null&&user_fbid!='')" src="https://graph.facebook.com/{{user_fbid}}/picture?width=66&&height=66">
+										<img alt="" ng-if="(profilephoto==null||profilephoto=='')&&(user_fbid==null||user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+									</a>
+								</div>
+								<div class="header-profile_name"><a href="{{baseurl}}/{{profilename}}">{{user_name}}</a></div>
+							</div>
+							<div class="header-notification" ng-mouseenter="onNotificationList = 1;" ng-mouseleave="onNotificationList=0">
+								<a href="javascript:void(0);" class="notification-link" id="show_notification" ng-click="showNotifications();" data-toggle="dropdown" id="dNotification" ><span ng-init="getNotificationCount()" id="notification_count" ng-show="checkNotificationCount()">{{NotificationCount}}</span></a>
+								<div class="dropdown-menu notification-list-outer" id="notifications-outer"  role="menu" aria-labelledby="dNotification">
+									<span ng-if="notificationAjax == 1" >
+										<img src="<?php echo $this->basePath(); ?>/public/images/ajax_loader.gif"> 
+									</span>
+									<span ng-if="notificationAjax==0" >
+										<span class="noti_arrow">
+											<img src="<?php echo $this->basePath(); ?>/public/images/notification-arrow.svg" alt="">
+										</span>
+										<div class="notification-list_head"><?php echo $this->translate('Notifications','default'); ?><span id="notification_count2" ng-if="NotificationCount>0">{{NotificationCount}}</span></div>
+										<div class="notification_nor" ng-class="{'notification_unread':items.user_notification_status == 'unread'}" ng-repeat="items in NotificationList">
+										<div class="noti_user-img">
+											<img alt="" ng-if="items.sender_profile_photo!=null&&items.sender_profile_photo!=''" src="<?php echo $this->basePath(); ?>/public/datagd/profile/{{items.user_notification_sender_id}}/{{ items.sender_profile_photo }}">
+											<img alt="" ng-if="(items.sender_profile_photo==null||items.sender_profile_photo=='')&&(items.sender_user_fbid!=null&&items.sender_user_fbid!='')" src="https://graph.facebook.com/{{items.sender_user_fbid}}/picture?width=66&&height=66">
+											<img alt="" ng-if="(items.sender_profile_photo==null||items.sender_profile_photo=='')&&(items.sender_user_fbid==null||items.sender_user_fbid=='')" src="<?php echo $this->basePath(); ?>/public/images/noimg.jpg">
+										</div>
+							<div class="noti_text">						 
+								<div ng-switch="items.notification_type_title">
+									<div ng-switch-when="Friend Request">
+										<a href="<?php echo $this->basePath(); ?>/{{profilename}}/friends?requests=1"> <span class="bold_contnet">{{items.sender_name}} </span><?php echo $this->translate('sent you a friend request','default'); ?></a>
+										
+									</div>
+									<div ng-switch-when="Friend Request Accept">
+										<a href="<?php echo $this->basePath(); ?>/{{items.sender_profile_name}}"><span class="bold_contnet"> {{items.sender_name}} </span> <?php echo $this->translate('accepted your friend request','default'); ?></a>
+									</div>
+									<div ng-switch-when="Group Invite">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}"><span class="bold_contnet">{{items.sender_name}}  </span> <?php echo $this->translate('invited you to join the group','default'); ?> {{items.group_title}}</a>
+									</div>
+									<div ng-switch-when="Group joining Request">
+										<a ng-if="items.group_type == 'public'" href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/members"><span class="bold_contnet">{{items.sender_name}} </span><?php echo $this->translate('sent you a request to join the group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></a>
+										<a ng-if="items.group_type != 'public'" href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/members"><span class="bold_contnet">{{items.sender_name}}</span>  <?php echo $this->translate('joined your group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></a>
+									</div>
+									<div ng-switch-when="Group Joining Request Accepted">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}"><span>{{items.sender_name}} </span> <?php echo $this->translate('accepted your  request to join the group','default'); ?>  <span>{{items.group_title}}</span></a>
+									</div>
+									<div ng-switch-when="Discussion">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/status/{{items.user_notification_reference_id}}">
+											<span ng-if="items.user_notification_process == 'New Discussion'"><span class="bold_contnet">{{items.sender_name}}</span>  <?php echo $this->translate('added a new post in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment'"><span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('commented  on your post in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment_hashed'"> <span class="bold_contnet">{{items.sender_name}} </span><?php echo $this->translate('mentioned you in a comment on','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'like'"><span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked the status in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment like'"><span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked your comment in the group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+										</a>
+									</div>
+									<div ng-switch-when="Event">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/events/{{items.user_notification_reference_id}}">
+											<span ng-if="items.user_notification_process == 'New Event'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('added a new event in','default'); ?>  <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment'">  <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('commented  on the event  in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment_hashed'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('mentioned you in a comment in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked the event in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked your comment in the group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'Join Event'"><span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('joined the event in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+										</a>
+									</div>
+									<div ng-switch-when="Media">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/media/{{items.user_notification_reference_id}}">
+											<span ng-if="items.user_notification_process == 'New Media'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('added a new media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('added a new comment on the media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment_hashed'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('mentioned you in a comment  in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked the media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked your comment in the group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											 
+											<span ng-if="items.media_file.media_type == 'image'" class="notification_media">
+												<img src="<?php echo $this->basePath(); ?>/public/datagd/group/{{items.group_id}}/media/thumbnail/{{items.media_file.content}}" />
+											</span>
+											<span ng-if="items.media_file.media_type == 'video'" class="notification_media">
+												<img ng-if="items.media_file.media_type=='video'" src="http://img.youtube.com/vi/{{getYouTubeIdFromURL(items.media_file.content)}}/0.jpg" />
+											</span>
+										 
+										</a>
+									</div>
+									<div ng-switch-when="Album">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/album/{{items.user_notification_reference_id}}">
+											 
+											<span ng-if="items.user_notification_process == 'comment'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('added a new comment on the media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment_hashed'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('mentioned you in a comment  in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked the media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked your comment in the group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											 
+																					</a>
+									</div>
+									<div ng-switch-when="Image">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}/media/image/{{items.media_id}}/{{items.user_notification_reference_id}}">
+											 
+											<span ng-if="items.user_notification_process == 'comment'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('added a new comment on the media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment_hashed'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('mentioned you in a comment  in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked the media in','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.user_notification_process == 'comment like'"> <span class="bold_contnet">{{items.sender_name}}</span> <?php echo $this->translate('liked your comment in the group','default'); ?> <span class="bold_contnet">{{items.group_title}}</span></span>
+											<span ng-if="items.media_contents.media_type == 'image'" class="notification_media">
+												<img src="<?php echo $this->basePath(); ?>/public/datagd/group/{{items.group_id}}/media/thumbnail/{{items.media_contents.content}}" />
+											</span>
+											<span ng-if="items.media_contents.media_type == 'video'" class="notification_media">
+												<img ng-if="items.media_contents.media_type=='video'" src="http://img.youtube.com/vi/{{getYouTubeIdFromURL(items.media_contents.content)}}/0.jpg" />
+											</span>
+										</a>
+									</div>
+									<div ng-switch-when="Group Admin Promoted">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}"> {{items.sender_name}}  <?php echo $this->translate('assigned you as an admin of the group','default'); ?> {{items.group_title}}</a>
+									</div>
+									<div ng-switch-when="Group ownership changes">
+										<a href="<?php echo $this->basePath(); ?>/groups/{{items.group_seo_title}}"> {{items.sender_name}}  <?php echo $this->translate('assigned you as an owner of the group','default'); ?> {{items.group_title}}</a>
+									</div>									
+								</div>	
+							</div>
+							<div class="clear"></div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="more_notification"><a href="<?php echo $this->basePath(); ?>/notifications" style="display:block;"><?php echo $this->translate('See All','default'); ?></a></div>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="header-settings">
+
+            	<a href="javascript:void(0);" class="settings-link" data-toggle="dropdown" id="dLabel"></a>
+
+                <ul class="dropdown-menu settings_dropdown" role="menu" aria-labelledby="dLabel">
+
+                	<li><a href="{{baseurl}}/settings"><?php echo $this->translate('Account Settings','default'); ?></a></li>                   
+
+					<li><a href="javascript:void(0);"><?php echo $this->translate('Help &amp; Support','default'); ?></a></li>
+
+                    <li><a href="<?php echo $this->url('user/logout'); ?>"><?php echo $this->translate('Log Out','default'); ?></a></li>
+
+              	</ul>
+
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div class="clear"></div>
+
+		</div>
+
+		</div>
+
+    </div> 
+
+	 
+
+	<div class="content_common_outer">
+
+    <?php echo $this->content; ?>
+
+	</div>
+
+	 
+
+	</div>
+ <script> 
+
+	var topbarApp = angular.module('profile-top',[]);
+
+		topbarApp.config(function ($httpProvider) {
+
+			$httpProvider.defaults.transformRequest = function(data){
+
+				if (data === undefined) {
+
+					return data;
+
+				}
+
+				return $.param(data);
+
+			}
+
+		});
+
+		topbarApp.controller('profileTopController',function($scope, $http,$timeout){
+
+			$scope.baseurl =' <?php echo 'http://'.@$_SERVER['SERVER_NAME']; ?>';
+
+			$scope.user_name = '<?php echo @$this->layout()->identity->user_given_name; ?>';
+
+			$scope.profilename = '<?php echo @$this->layout()->identity->user_profile_name; ?>';			
+
+			$scope.profilephoto = '<?php echo @$this->layout()->identity->profile_pic; ?>';
+
+			$scope.user_id = '<?php echo @$this->layout()->identity->user_id; ?>';
+
+			$scope.user_fbid = '<?php echo @$this->layout()->identity->user_fbid; ?>';
+
+			$scope.user_status = '<?php echo @$this->layout()->identity->user_status; ?>';
+
+			$scope.user_email = '<?php echo @$this->layout()->identity->user_email; ?>';
+
+			$scope.varificationprocess = 1;
+
+			$scope.searchjeera = '';
+
+			$scope.searchActive = 0;
+
+			$scope.searchFlag = 0;
+
+			$scope.userInfo = [];
+
+			$scope.groupInfo = [];
+
+			$scope.onList = 0;
+
+			$scope.onNotificationList=0;
+
+			$scope.notificationShow = 0;
+
+			$scope.NotificationCount = 0;
+
+			$scope.NotificationList = '';
+			$scope.ajaxSearchFlag = 0;
+
+			$scope.action = '<?php echo $this->getHelperPluginManager()->getServiceLocator()->get('Application')->getMvcEvent()->getRouteMatch()->getParam('action'); ?>';
+
+			 
+
+			$scope.Search = function(txtsearch){ 
+
+				 $('.spotsearchresult').show();
+
+					$scope.searchActive = 1;
+					$scope.ajaxSearchFlag =1;
+					 url = baseurl + '/quicksearch';
+
+					$http.post(url,{searchdata:txtsearch},{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}
+
+					).success(function(data, status, headers, config) {
+
+						 if(data.return_array.process_status == 'success'){
+
+							 $scope.joingroupStep = 3;
+							$scope.ajaxSearchFlag =0;
+							// $scope.searchFlag=0;	
+
+							 $scope.groupInfo = data.return_array.groupinfo;
+
+							 $scope.userInfo = data.return_array.user_info;
+
+						 }else{
+							$scope.ajaxSearchFlag =0;
+							 alert(data.return_array.process_info);
+
+							 $scope.aboutmeAjax =0;		
+
+						 }
+
+
+
+					}) ;
+ 
+			}
+
+			 window.onclick = function(e) {
+				if(e.target.className == "spotsearchresult" || e.target.className == "txt_quicksearch"){;}else{$(".spotsearchresult").hide();}
+				 
+
+				if($scope.onNotificationList==0){
+
+					$scope.NotificationCount = 0; 
+
+					$scope.notificationShow = 0;					
+
+				}
+
+			 }
+
+			 $scope.notificationAjax = 0;
+
+			 $scope.showNotifications = function(){
+
+				$scope.notificationShow = 1;
+				if($scope.NotificationCount<=0){
+					$("#notification_count2").hide();
+				}
+				if( $scope.notificationAjax == 0){
+
+					$scope.notificationAjax = 1;
+
+					url = baseurl + '/getNotificationlist';
+
+					$http({
+
+					  method: 'POST',
+
+					  url: url
+
+					}
+
+					).success(function(data, status, headers, config) {
+
+						 if(data.return_array.process_status == 'success'){
+
+							  $scope.NotificationList = data.return_array.notification_list;
+
+							  $scope.makeNotificationReaded();
+
+						 }else{
+
+							 alert(data.return_array.process_info);
+
+								
+
+						 }
+
+						 $scope.notificationAjax = 0;
+
+
+
+					}).error(function(data, status, headers, config) {
+
+						 alert("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+
+						  $scope.notificationAjax = 0;
+
+					});
+
+				}
+
+			 }
+
+			 $scope.getNotificationCount = function(){ 
+
+				url = baseurl + '/getNotificationCount';
+
+				$http({
+
+				  method: 'POST',
+
+				  url: url
+
+				}
+
+				).success(function(data, status, headers, config) {
+
+					 if(data.return_array.process_status == 'success'){
+						if(data.return_array.notification_count>0){
+							 $scope.NotificationCount = data.return_array.notification_count;
+							$("#notification_count").show();	
+							$("#notification_count2").show();
+						}else{
+							$("#notification_count").hide();	
+							$("#notification_count2").hide();
+						}
+					 }else{
+						 alert(data.return_array.process_info);
+					 }
+
+
+
+				}).error(function(data, status, headers, config) {
+
+					 alert("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+
+				}); 
+
+			 } 
+			 $scope.getYouTubeIdFromURL = function(url){ 
+			var regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]{11,11}).*/;
+			var match = url.match(regExp);
+			if (match) if (match.length >= 2) return match[2];
+			return false;
+		}
+
+			 $scope.makeNotificationReaded = function(){ 
+
+				url = baseurl + '/makenotificationreaded';
+
+				$http({
+
+				  method: 'POST',
+
+				  url: url
+
+				}
+
+				).success(function(data, status, headers, config) {
+
+					 ;
+
+				}).error(function(data, status, headers, config) {
+
+					;  
+
+				});
+
+			 }
+
+			 $scope.varifyAccount=function(){
+
+				$scope.varificationprocess = 2;
+
+				url = baseurl + '/user/resendverification'; 
+
+				$http.post(url,{user_email:$scope.user_email},{headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}	}
+
+					).success(function(data, status, headers, config) {
+
+						 if(data.return_array.process_status == 'success'){	
+
+							$scope.varificationprocess = 3;
+
+						 }else{
+
+							 alert(data.return_array.process_info);
+
+							
+
+						 }
+
+
+
+					}).error(function(data, status, headers, config) {
+
+						 alert("<?php echo $this->translate('Error occured. Please try again','default'); ?>");
+
+						  $scope.varificationprocess =1;
+
+					}); 
+
+			 }
+			 $scope.checkNotificationCount = function(){
+				 if($scope.NotificationCount >0){return true;}else{return false;}
+			 }
+
+		});
+
+		
+
+		$(window).load(function(){ 
+
+		<?php if($this->getHelperPluginManager()->getServiceLocator()->get('Application')->getMvcEvent()->getRouteMatch()->getParam('action')=='feeds'){ ?>
+
+			createMap();
+
+		<?php } ?>
+
+			
+
+		}) ;
+
+		checkUserStatus();
+
+		function checkUserStatus(){
+
+			url = baseurl + '/user/checkUserStatus'; 	
+
+			$.ajax({
+
+				type:'POST',
+
+				url: url,				 				 
+
+				success: function(response) {
+
+					if(response.return_array.process_status == 'success'){
+
+						if(response.return_array.user_status == 'not active'){
+
+							$("#user_status_activate").show();
+
+							$(".content_common_outer").addClass("content_common_outer_error");
+
+							$(".content_common_outer").removeClass("content_common_outer");
+
+						}
+
+					}				 
+
+				},
+
+				error: function(resp) { alert(resp.responseText); }
+
+			});
+
+		}
+ timeout=setInterval('load_data()',3000);
+	function load_data(){
+		 url = baseurl + '/getNotificationCount';
+		 $.ajax({
+
+				type:'POST',
+
+				url: url,				 				 
+
+				success: function(response) {
+
+					if(response.return_array.process_status == 'success'){					 
+						if(response.return_array.notification_count>0){
+							$("#notification_count").html(response.return_array.notification_count);	
+							$("#notification_count2").html(response.return_array.notification_count);	
+							$("#notification_count").show();	
+							$("#notification_count2").show();
+						}else{
+							$("#notification_count").html(0);	
+							$("#notification_count2").html(0);	
+							$("#notification_count").hide();	
+							$("#notification_count2").hide();
+						}
+					}				 
+
+				}		 
+
+			});
+	}	
+</script>
+<script>
+  window.intercomSettings = {
+    // TODO: The current logged in user's full name
+    name: "<?php echo @$this->layout()->identity->user_given_name; ?>",
+    // TODO: The current logged in user's email address.
+    email: "<?php echo @$this->layout()->identity->user_email; ?>",
+    // TODO: The current logged in user's sign-up date as a Unix timestamp.
+    created_at: <?php echo @strtotime($this->layout()->identity->user_added_timestamp); ?>,
+	"user_hash": "<?php echo
+    hash_hmac("sha256", $this->layout()->identity->user_email, "0JT3zlMR0_n97UY93WB8PZLQieK-Uhr8Tph7D3fE");
+  ?>",
+    app_id: "m4lraon2"
+  };
+  
+</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/m4lraon2';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    </body>
+
+</html>
+
+
+

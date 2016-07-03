@@ -1,0 +1,2339 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-02 18:30+0400\n"
+"PO-Revision-Date: 2015-09-02 18:56+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar_AE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+#: ../view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: ../view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: ../view/error/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: ../view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: ../view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: ../view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: ../view/error/404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: ../view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: ../view/error/404.phtml:53 ../view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: ../view/error/404.phtml:56 ../view/error/404.phtml:80
+#: ../view/error/index.phtml:11 ../view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: ../view/error/404.phtml:60 ../view/error/404.phtml:84
+#: ../view/error/index.phtml:15 ../view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: ../view/error/404.phtml:64 ../view/error/404.phtml:88
+#: ../view/error/index.phtml:19 ../view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: ../view/error/404.phtml:74 ../view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: ../view/error/404.phtml:103 ../view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: ../view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: ../view/layout/container_top.phtml:17 ../view/layout/layout - Copy.phtml:5
+#: ../view/layout/planet_home.phtml:17
+msgid "Explore Yourself"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:38
+msgid "1625"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:49 Copy.phtml:53
+msgid "Home"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:51
+msgid "Logout"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:54
+msgid "Register"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:55
+msgid "Login"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:58
+msgid "Contact Us"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:71
+msgid "All rights reserved."
+msgstr ""
+
+#: ../view/error/404.phtml:13
+msgid "Sign Up"
+msgstr "تسجيل"
+
+#: ../view/error/404.phtml:11
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+#: ../view/error/404.phtml:25
+msgid "One Space For All Your Interests"
+msgstr "واحد الفضاء للجميع مصالحكم"
+
+#: ../view/error/404.phtml:329
+msgid "Not a Jeera member yet?"
+msgstr "لست عضوا بعد؟"
+
+#: ../view/error/404.phtml:329
+msgid "Sign Up now!"
+msgstr "أفتح حساب الأن!"
+
+#: ../view/error/404.phtml:333
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: ../view/error/404.phtml:341
+msgid "Password"
+msgstr "كلمة السر"
+
+#: ../view/error/404.phtml:349
+msgid "Keep me logged in"
+msgstr "تذكرني"
+
+#: ../view/error/404.phtml:321
+msgid "Forgot Password?"
+msgstr "هل نسيت كلمة المرور؟"
+
+#: ../view/error/404.phtml:321
+msgid "Forgot Password"
+msgstr "نسيت كلمة المرور"
+
+#: ../view/error/404.phtml:687
+msgid "Please enter a valid email address"
+msgstr "يرجى إدخال عنوان بريد إلكتروني صالح"
+
+#: ../view/error/404.phtml:691
+msgid "Please enter your password"
+msgstr "يرجى إدخال كلمة المرور"
+
+#: ../view/error/404.phtml:691
+msgid "Invalid Email or Password"
+msgstr "البريد الإلكتروني أو كلمة السر خاطئة"
+
+#: ../view/error/404.phtml:685
+msgid "Please enter your email address"
+msgstr "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك"
+
+#: ../Application/src/Application/Controller/IndexController.php:423
+msgid "Your account has been suspended. Please contact Jeera administrator to activate it"
+msgstr "تم تعليق حسابك. يرجى الاتصال بمسؤول جيرا لتفعيلها"
+
+#: ../Application/src/Application/Controller/IndexController.php:423
+msgid "Your account has been blocked. Please contact Jeera administrator  to activate it"
+msgstr "تم حظر الحساب الخاص بك. يرجى الاتصال بمسؤول جيرا لتفعيلها"
+
+#: ../Application/src/Application/Controller/IndexController.php:428
+msgid "Account does not exist"
+msgstr "الحساب غير موجود"
+
+#: ../view/error/404.phtml:614
+msgid "Forgot your password"
+msgstr "نسيت كلمة المرور"
+
+#: ../view/error/404.phtml:616
+msgid "Hey it happens to everyone. Just tell us what email address you’re using and we will send you the instructions."
+msgstr "مهلا يحدث للجميع. فقط اقول لنا ما عنوان البريد الإلكتروني الذي تستخدمه وسوف نرسل لك التعليمات."
+
+#: ../view/error/404.phtml:616
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: ../view/error/404.phtml:616
+msgid "The email you entered does not exist in our system, kindly register as a new user"
+msgstr "عدم وجود البريد الإلكتروني الذي أدخلته في نظامنا. تسجيل يرجى كمستخدم جديد"
+
+#: ../view/error/404.phtml:616
+msgid "The password reset steps has been sent to your mail, please follow the instructions to reset it"
+msgstr "وقد أرسلت الخطوات إعادة تعيين كلمة المرور إلى البريد الخاص بك، يرجى اتباع التعليمات لإعادة تعيينها"
+
+#: ../view/error/404.phtml:616
+msgid "Unable to process"
+msgstr "غير قادر على معالجة"
+
+#: ../view/error/404.phtml:616
+msgid "Almost Done..."
+msgstr "تم تقريبا ..."
+
+#: ../view/error/404.phtml:616
+msgid "Resend verification"
+msgstr "التحقق إعادة إرسال"
+
+#: ../view/error/404.phtml:616
+msgid "This account is activated already"
+msgstr "يتم تنشيط هذا الحساب بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Verification code is sent to your email. Please check your email and follow the instructions"
+msgstr "يتم إرسال رمز التحقق إلى البريد الإلكتروني الخاص بك. يرجى التحقق من بريدك الالكتروني واتبع التعليمات"
+
+#: ../view/error/404.phtml:616
+msgid "There are no records in this system with e-mail ID given"
+msgstr "لا توجد سجلات في هذا النظام مع معرف البريد الإلكتروني نظرا"
+
+#: ../view/error/404.phtml:616
+msgid "Data not available"
+msgstr "البيانات غير متوفرة"
+
+#: ../view/error/404.phtml:616
+msgid "No more posts to show."
+msgstr "لا مزيد من المشاركات لتظهر."
+
+#: ../view/error/404.phtml:616
+msgid "Join This Group"
+msgstr "انضم إلى هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Open Group"
+msgstr "مفتوحة المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Public Group"
+msgstr "المجموعة الجمهور"
+
+#: ../view/error/404.phtml:616
+msgid "Private Group"
+msgstr "مجموعة خاصة"
+
+#: ../view/error/404.phtml:616
+msgid "Group Interests"
+msgstr "مجموعة الهوايات"
+
+#: ../view/error/404.phtml:616
+msgid "members"
+msgstr "أعضاء"
+
+#: ../view/error/404.phtml:616
+msgid "friends"
+msgstr "أصدقاء"
+
+#: ../view/error/404.phtml:616
+msgid "fashion"
+msgstr "موضة"
+
+#: ../view/error/404.phtml:616
+msgid "sports"
+msgstr "الرياضة"
+
+#: ../view/error/404.phtml:616
+msgid "games"
+msgstr "ألعاب"
+
+#: ../view/error/404.phtml:616
+msgid "culture"
+msgstr "ثقافة"
+
+#: ../view/error/404.phtml:616
+msgid "tag1"
+msgstr "1 بطاقة"
+
+#: ../view/error/404.phtml:616
+msgid "tag2"
+msgstr "2 بطاقة"
+
+#: ../view/error/404.phtml:616
+msgid "action"
+msgstr "عمل"
+
+#: ../view/error/404.phtml:616
+msgid "Thriller"
+msgstr "قصة مثيرة"
+
+#: ../view/error/404.phtml:616
+msgid "drama"
+msgstr "دراما"
+
+#: ../view/error/404.phtml:616
+msgid "love"
+msgstr "الحب"
+
+#: ../view/error/404.phtml:616
+msgid "dance"
+msgstr "رقص"
+
+#: ../view/error/404.phtml:616
+msgid "war"
+msgstr "حرب"
+
+#: ../view/error/404.phtml:616
+msgid "Indian"
+msgstr "هندي"
+
+#: ../view/error/404.phtml:616
+msgid "world"
+msgstr "عالم"
+
+#: ../view/error/404.phtml:616
+msgid "pop"
+msgstr "فرقعة"
+
+#: ../view/error/404.phtml:616
+msgid "rock"
+msgstr "صخرة"
+
+#: ../view/error/404.phtml:616
+msgid "classical"
+msgstr "كلاسيكي"
+
+#: ../view/error/404.phtml:616
+msgid "cricket"
+msgstr "كريكيت"
+
+#: ../view/error/404.phtml:616
+msgid "football"
+msgstr "كرة القدم"
+
+#: ../view/error/404.phtml:616
+msgid "tag3"
+msgstr "العلامة 3"
+
+#: ../view/error/404.phtml:616
+msgid "United Arab Emirates"
+msgstr "الإمارات العربية المتحدة"
+
+#: ../view/error/404.phtml:616
+msgid "UAE"
+msgstr "الإمارات العربية المتحدة"
+
+#: ../view/error/404.phtml:616
+msgid "Oman"
+msgstr "يا شيخ"
+
+#: ../view/error/404.phtml:616
+msgid "OM"
+msgstr "يا شيخ"
+
+#: ../view/error/404.phtml:616
+msgid "Bahrain"
+msgstr "البحرين"
+
+#: ../view/error/404.phtml:616
+msgid "BH"
+msgstr "البحرين"
+
+#: ../view/error/404.phtml:616
+msgid "India"
+msgstr "الهند"
+
+#: ../view/error/404.phtml:616
+msgid "IN"
+msgstr "الهند"
+
+#: ../view/error/404.phtml:616
+msgid "Abu Dhabi"
+msgstr "أبوظبي"
+
+#: ../view/error/404.phtml:616
+msgid "Ajman"
+msgstr "عجمان"
+
+#: ../view/error/404.phtml:616
+msgid "Dubai"
+msgstr "دبي"
+
+#: ../view/error/404.phtml:616
+msgid "Fujairah"
+msgstr "الفجيرة"
+
+#: ../view/error/404.phtml:616
+msgid "Ras al-Khaimah"
+msgstr "راس الخيمه"
+
+#: ../view/error/404.phtml:616
+msgid "Sharjah"
+msgstr "الشارقة"
+
+#: ../view/error/404.phtml:616
+msgid "Umm al-Quwain"
+msgstr "أم القوين"
+
+#: ../view/error/404.phtml:616
+msgid "Ad Dakhiliyah"
+msgstr "Ad Dakhiliyah"
+
+#: ../view/error/404.phtml:616
+msgid "Ad Dhahirah North"
+msgstr "Ad Dhahirah North"
+
+#: ../view/error/404.phtml:616
+msgid "Al Batinah North"
+msgstr "منطقة شمال الباطنة"
+
+#: ../view/error/404.phtml:616
+msgid "Al Batinah South"
+msgstr "الباطنة جنوب"
+
+#: ../view/error/404.phtml:616
+msgid "Al Buraimi"
+msgstr "البريمي"
+
+#: ../view/error/404.phtml:616
+msgid "Al Wusta"
+msgstr "Al Wusta"
+
+#: ../view/error/404.phtml:616
+msgid "Ash Sharqiyah North"
+msgstr "Ash Sharqiyah North"
+
+#: ../view/error/404.phtml:616
+msgid "Ash Sharqiyah South"
+msgstr "Ash Sharqiyah South"
+
+#: ../view/error/404.phtml:616
+msgid "Dhofar"
+msgstr "ظفار"
+
+#: ../view/error/404.phtml:616
+msgid "Mascat"
+msgstr "المسكات عنب طيب الشذا"
+
+#: ../view/error/404.phtml:616
+msgid "Musandam"
+msgstr "مسندم"
+
+#: ../view/error/404.phtml:616
+msgid "Kerala"
+msgstr "ولاية كيرالا"
+
+#: ../view/error/404.phtml:616
+msgid "Tamilnadu"
+msgstr "تاميل نادو"
+
+#: ../view/error/404.phtml:616
+msgid "Karnataka"
+msgstr "كارناتاكا"
+
+#: ../view/error/404.phtml:616
+msgid "Assam"
+msgstr "اسام"
+
+#: ../view/error/404.phtml:616
+msgid "SignUp for Jeera"
+msgstr "سجل في جيرا"
+
+#: ../view/error/404.phtml:616
+msgid "Your Name"
+msgstr "اسمك"
+
+#: ../view/error/404.phtml:616
+msgid "Your Email Address"
+msgstr "بريدك الإلكتروني"
+
+#: ../view/error/404.phtml:616
+msgid "OR"
+msgstr "أو"
+
+#: ../view/error/404.phtml:616
+msgid "By signing up, you confirm that you accept our"
+msgstr "من خلال التوقيع، فأنت تؤكد أنك تقبل لدينا"
+
+#: ../view/error/404.phtml:616
+msgid "Terms of Service"
+msgstr "شروط الخدمة"
+
+#: ../view/error/404.phtml:616
+msgid "Enter your location"
+msgstr "إدخال الدولة"
+
+#: ../view/error/404.phtml:616
+msgid "Go Back"
+msgstr "ارجع"
+
+#: ../view/error/404.phtml:616
+msgid "Continue"
+msgstr "تواصل"
+
+#: ../view/error/404.phtml:616
+msgid "Hello there"
+msgstr "مرحبا"
+
+#: ../view/error/404.phtml:616
+msgid "Welcome to Jeera"
+msgstr "مرحبا بكم في جيرا"
+
+#: ../view/error/404.phtml:616
+msgid "Our platform envolves around two key pilars, groups and interests. We will help you setting those up to make the most of Jeera"
+msgstr "برنامجنا تدور حول اثنين من الركائز الأساسية والجماعات والمصالح. ونحن سوف تساعدك على تحديد تلك التي تصل إلى تحقيق الاستفادة القصوى من جيرا"
+
+#: ../view/error/404.phtml:616
+msgid "Let’s Go!"
+msgstr "دعنا نذهب!"
+
+#: ../view/error/404.phtml:616
+msgid "We have created a smarter way to browse through interests to find exactly what you like"
+msgstr "أنشأنا أذكى وسيلة لتصفح مصالح لإيجاد بالضبط ما تريد"
+
+#: ../view/error/404.phtml:616
+msgid "Pick some categories that interest you"
+msgstr "اختيار بعض الفئات التي تهمك"
+
+#: ../view/error/404.phtml:616
+msgid "Done"
+msgstr "فعله"
+
+#: ../view/error/404.phtml:616
+msgid "Great job! Now let's see what those categories are covering"
+msgstr "عمل عظيم! الآن دعونا نرى ما هي تلك الفئات التي تغطي"
+
+#: ../view/error/404.phtml:616
+msgid "Pick some interests from the categories"
+msgstr "اختيار بعض المصالح من الفئات"
+
+#: ../view/error/404.phtml:616
+msgid "Very Interesting! Let’s see who is sharing your interests now!"
+msgstr "جيد جدا! دعونا نرى من هو تقاسم المصالح الخاصة بك الآن!"
+
+#: ../view/error/404.phtml:616
+msgid "It’s time for a big jump, join  groups now and start connecting with each of their members"
+msgstr "حان الوقت لقفزة كبيرة، الانضمام إلى الجماعات الآن والبدء في التواصل مع كل من أعضائها"
+
+#: ../view/error/404.phtml:616
+msgid "Don’t see what you are looking for?"
+msgstr "لا ترى ما كنت تبحث عنه؟"
+
+#: ../view/error/404.phtml:616
+msgid "Try"
+msgstr "محاولة"
+
+#: ../view/error/404.phtml:616
+msgid "Creating Your Own Group"
+msgstr "إنشاء المجموعة الخاصة بك"
+
+#: ../view/error/404.phtml:616
+msgid "More"
+msgstr "أكثر"
+
+#: ../view/error/404.phtml:616
+msgid "No more groups exist in the system based on your interest"
+msgstr "لا توجد المزيد من المجموعات في نظام يقوم على اهتمامك"
+
+#: ../view/error/404.phtml:616
+msgid "Finish"
+msgstr "نهاية"
+
+#: ../view/error/404.phtml:616
+msgid "Close"
+msgstr "قريب"
+
+#: ../view/error/404.phtml:616
+msgid "Introduce Yourself"
+msgstr "أعرض نفسك"
+
+#: ../view/error/404.phtml:616
+msgid "Looks like you haven’t written your bio, why don’t you introduce yourself to the group? *You can edit this later on your profile page"
+msgstr "يبدو أنك لم تكتب سيرتك الذاتية، لماذا لا تقدم نفسك إلى مجموعة؟ * يمكنك تحرير هذا في وقت لاحق على صفحة ملفك الشخصي"
+
+#: ../view/error/404.phtml:616
+msgid "Skip"
+msgstr "تخطى"
+
+#: ../view/error/404.phtml:616
+msgid "Upload Your Photo"
+msgstr "تحميل صورك"
+
+#: ../view/error/404.phtml:616
+msgid "Upload"
+msgstr "تحميل"
+
+#: ../view/error/404.phtml:616
+msgid "Looks like you haven’t uploaded your profile photo. You can do it now (this improves your credibility on Jeera)."
+msgstr "يبدو أنك لم تحميلها صورة ملفك الشخصي. يمكنك أن تفعل ذلك الآن (وهذا يحسن مصداقيتك على جيرا)."
+
+#: ../view/error/404.phtml:616
+msgid "You can change this later on your profile page"
+msgstr "يمكنك تغيير هذا في وقت لاحق على صفحة ملفك الشخصي"
+
+#: ../view/error/404.phtml:616
+msgid "How about knowing a bit more about you?"
+msgstr "ماذا عن معرفة أكثر قليلا عنك؟"
+
+#: ../view/error/404.phtml:616
+msgid "Your request has been sent"
+msgstr "تم ارسال طلبك"
+
+#: ../view/error/404.phtml:616
+msgid "Thank you for joining this group"
+msgstr "شكرا لانضمامك هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Show Me Some More Similar Groups"
+msgstr "أرني بعض المجموعات المزيد مماثلة"
+
+#: ../view/error/404.phtml:616
+msgid "Position and Size Your Photo"
+msgstr "موقف وحجم صورتك"
+
+#: ../view/error/404.phtml:616
+msgid "Apply"
+msgstr "تطبيق"
+
+#: ../view/error/404.phtml:616
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: ../view/error/404.phtml:616
+msgid "Group Info"
+msgstr "مجموعة معلومات"
+
+#: ../view/error/404.phtml:616
+msgid "Interests"
+msgstr "الإهتمامات"
+
+#: ../view/error/404.phtml:616
+msgid "INVITE &amp; ASK"
+msgstr "دعوة ونسأل"
+
+#: ../view/error/404.phtml:616
+msgid "Group name is required"
+msgstr "مطلوب اسم المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group Country"
+msgstr "اختيار المجموعة البلد"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group City"
+msgstr "اختيار مجموعة سيتي"
+
+#: ../view/error/404.phtml:616
+msgid "Country and city are required"
+msgstr "هناك حاجة البلد والمدينة"
+
+#: ../view/error/404.phtml:616
+msgid "Upload Banner Photo"
+msgstr "راية صور تحميل"
+
+#: ../view/error/404.phtml:616
+msgid "Choose a photo to upload"
+msgstr "اختيار صورة لتحميل"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group Type"
+msgstr "اختر نوع المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "This group will be visible to everyone and can be joined immediately"
+msgstr "وهذه المجموعة تكون مرئية للجميع ويمكن انضم فورا"
+
+#: ../view/error/404.phtml:616
+msgid "without group owner approval"
+msgstr "دون موافقة مالك المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "This group will be visible to everyone, but the group owner receives requests for the group joining which he can accept or decline."
+msgstr "وهذه المجموعة تكون مرئية للجميع، ولكن يتلقى مالك المجموعة طلبات مجموعة انضمامه الذي لا يمكن أن يقبل أو الانخفاض."
+
+#: ../view/error/404.phtml:616
+msgid "This group will not be visible to anyone in regular search. It is invite based and users can not join the group unless you invite them."
+msgstr "وهذه المجموعة لا تكون مرئية إلى أي شخص في البحث العادي. وتدعو يستند إليها ولا يمكن للمستخدمين الانضمام إلى المجموعة إلا إذا كنت دعوتهم."
+
+#: ../view/error/404.phtml:616
+msgid "Describe Your Group"
+msgstr "وصف مجموعتك"
+
+#: ../view/error/404.phtml:616
+msgid "Group Description is required"
+msgstr "مطلوب وصف المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Category"
+msgstr "اختر الفئة"
+
+#: ../view/error/404.phtml:616
+msgid "Chosen Group Interests"
+msgstr "اختيار المجموعة الهوايات"
+
+#: ../view/error/404.phtml:616
+msgid "Select some interests to proceed"
+msgstr "حدد بعض المصالح للمضي قدما"
+
+#: ../view/error/404.phtml:616
+msgid "Invite People to Your Group"
+msgstr "دعوة الناس إلى مجموعتك"
+
+#: ../view/error/404.phtml:616
+msgid "Optional"
+msgstr "اختياري"
+
+#: ../view/error/404.phtml:616
+msgid "Add more people"
+msgstr "إضافة المزيد من الناس"
+
+#: ../view/error/404.phtml:616
+msgid "No matching profiles"
+msgstr "أية أوضاع مطابقة"
+
+#: ../view/error/404.phtml:616
+msgid "Add Questionary"
+msgstr "إضافة استبيان"
+
+#: ../view/error/404.phtml:616
+msgid "Once people start sending their requests to join your group, the questionnaire can be helpful. By asking few questions, you can learn about your potential group members and make better choices about who should be able to join your group"
+msgstr "مرة واحدة يبدأ الناس بإرسال طلبات للانضمام إلى مجموعتك، يمكن للاستبيان أن تكون مفيدة. عن طريق طرح بعض الأسئلة، يمكنك معرفة المزيد عن أعضاء مجموعتك المحتملة واتخاذ الخيارات الأفضل حول من ينبغي أن تكون قادرة على الانضمام مجموعتك"
+
+#: ../view/error/404.phtml:616
+msgid "Question"
+msgstr "سؤال"
+
+#: ../view/error/404.phtml:616
+msgid "add"
+msgstr "إضافة"
+
+#: ../view/error/404.phtml:616
+msgid "remove"
+msgstr "إزالة"
+
+#: ../view/error/404.phtml:616
+msgid "Click to add question"
+msgstr "انقر لإضافة سؤال"
+
+#: ../view/error/404.phtml:616
+msgid "1 questions left"
+msgstr "1 أسئلة اليسار"
+
+#: ../view/error/404.phtml:616
+msgid "Already have an account"
+msgstr "لديك بالفعل حساب"
+
+#: ../view/error/404.phtml:616
+msgid "Select Country"
+msgstr "اختر الأمة"
+
+#: ../view/error/404.phtml:616
+msgid "Select City"
+msgstr "اختر مدينة"
+
+#: ../view/error/404.phtml:616
+msgid "Please enter your name"
+msgstr "من فضلك أدخل إسمك"
+
+#: ../view/error/404.phtml:616
+msgid "Password must contain more than 5 charectors"
+msgstr "كلمة السر يجب أن يحتوي على أكثر من 5 أحرف"
+
+#: ../view/error/404.phtml:616
+msgid "Invalid email address"
+msgstr "البريدالالكتروني غير صالح"
+
+#: ../view/error/404.phtml:616
+msgid "Enter a valid email address"
+msgstr "أدخل عنوان بريد إلكتروني صالح"
+
+#: ../view/error/404.phtml:616
+msgid "Email you have entered already exists"
+msgstr "البريد الإلكتروني الذي أدخلته موجود مسبقا"
+
+#: ../view/error/404.phtml:616
+msgid "Enter email address"
+msgstr "أدخل عنوان البريد الالكتروني"
+
+#: ../view/error/404.phtml:616
+msgid "Available"
+msgstr "متاح"
+
+#: ../view/error/404.phtml:616
+msgid "Select atleast one category"
+msgstr "حدد فئة واحدة على الأقل"
+
+#: ../view/error/404.phtml:616
+msgid "photography"
+msgstr "تصوير"
+
+#: ../view/error/404.phtml:616
+msgid "Cinema"
+msgstr "السينما"
+
+#: ../view/error/404.phtml:616
+msgid "History"
+msgstr "تاريخ"
+
+#: ../view/error/404.phtml:616
+msgid "Music"
+msgstr "موسيقى"
+
+#: ../view/error/404.phtml:616
+msgid "Sports"
+msgstr "الرياضة"
+
+#: ../view/error/404.phtml:616
+msgid "test"
+msgstr "اختبار"
+
+#: ../view/error/404.phtml:616
+msgid "Select atleast one tag"
+msgstr "حدد أتلست علامة واحدة"
+
+#: ../view/error/404.phtml:616
+msgid "User not exist in the system"
+msgstr "العضو غير موجود في النظام"
+
+#: ../view/error/404.phtml:616
+msgid "Your session expired, please log in again to continue"
+msgstr "جلستك انتهت، الرجاء تسجيل الدخول مرة أخرى لمواصلة"
+
+#: ../view/error/404.phtml:616
+msgid "Pending Request"
+msgstr "في انتظار طلب"
+
+#: ../view/error/404.phtml:616
+msgid "Tell something interesting about yourself"
+msgstr "أقول شيئا للاهتمام عن نفسك"
+
+#: ../view/error/404.phtml:616
+msgid "Your Answer"
+msgstr "إجابتك"
+
+#: ../view/error/404.phtml:616
+msgid "e.g. Arsenal Lovers"
+msgstr "مثلا ترسانة أحباء"
+
+#: ../view/error/404.phtml:616
+msgid "Type Your Question"
+msgstr "اكتب سؤالك"
+
+#: ../view/error/404.phtml:616
+msgid "Type Your Options"
+msgstr "اكتب خياراتك"
+
+#: ../view/error/404.phtml:616
+msgid "All Category"
+msgstr "جميع الفئات"
+
+#: ../view/error/404.phtml:616
+msgid "Name Your Group"
+msgstr "اسم المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Tell us what is your group about"
+msgstr "قل لنا ما هو مجموعتك حول"
+
+#: ../view/error/404.phtml:616
+msgid "Search Interest"
+msgstr "البحث الفائدة"
+
+#: ../view/error/404.phtml:616
+msgid "Select Question Type"
+msgstr "حدد نوع السؤال"
+
+#: ../view/error/404.phtml:616
+msgid "Textarea"
+msgstr "تيكستاريا"
+
+#: ../view/error/404.phtml:616
+msgid "CheckBox"
+msgstr "خانة الاختيار"
+
+#: ../view/error/404.phtml:616
+msgid "Radiobutton"
+msgstr "زر الراديو"
+
+#: ../view/error/404.phtml:616
+msgid "Please enter question"
+msgstr "الرجاء إدخال السؤال"
+
+#: ../view/error/404.phtml:616
+msgid "Please enter atleast two options for question"
+msgstr "الرجاء إدخال أتلست خيارين بالنسبة للسؤال"
+
+#: ../view/error/404.phtml:616
+msgid "Error occurred. Please try again"
+msgstr "حدث خطأ. حاول مرة اخرى"
+
+#: ../view/error/404.phtml:616
+msgid "Please select atleast one interest"
+msgstr "يرجى تحديد أتلست مصلحة واحدة"
+
+#: ../view/error/404.phtml:616
+msgid "Group title is required"
+msgstr "مطلوب عنوان المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "This group name is already taken"
+msgstr "يؤخذ هذا اسم المجموعة بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Some error occurred. Please try again"
+msgstr "وقع بعض الخطأ. حاول مرة اخرى"
+
+#: ../view/error/404.phtml:616
+msgid "Your account is not yet verified"
+msgstr "لم يتم التحقق من الحساب الخاص بك حتى الآن"
+
+#: ../view/error/404.phtml:616
+msgid "click here to resend the verification mail"
+msgstr "انقر هنا لإعادة إرسال البريد التحقق"
+
+#: ../view/error/404.phtml:616
+msgid "Verification code is sent. Please check your email and follow the instructions."
+msgstr "يتم إرسال رمز التحقق. يرجى التحقق من بريدك الالكتروني واتبع التعليمات."
+
+#: ../view/error/404.phtml:616
+msgid "Explore"
+msgstr "بحث"
+
+#: ../view/error/404.phtml:616
+msgid "My Feed"
+msgstr "بلدي الأعلاف"
+
+#: ../view/error/404.phtml:616
+msgid "Show more"
+msgstr "عرض المزيد"
+
+#: ../view/error/404.phtml:616
+msgid "Notifications"
+msgstr "الإخطارات"
+
+#: ../view/error/404.phtml:616
+msgid "Search Jeera"
+msgstr "البحث جيرا"
+
+#: ../view/error/404.phtml:616
+msgid "Posts"
+msgstr "المشاركات"
+
+#: ../view/error/404.phtml:616
+msgid "Groups"
+msgstr "المجموعات"
+
+#: ../view/error/404.phtml:616
+msgid "Friends"
+msgstr "أصدقاء"
+
+#: ../view/error/404.phtml:616
+msgid "My Activity"
+msgstr "بلدي آخر"
+
+#: ../view/error/404.phtml:616
+msgid "Show"
+msgstr "عرض"
+
+#: ../view/error/404.phtml:616
+msgid "All"
+msgstr "كل"
+
+#: ../view/error/404.phtml:616
+msgid "Text"
+msgstr "نص"
+
+#: ../view/error/404.phtml:616
+msgid "Media"
+msgstr "وسائل الإعلام"
+
+#: ../view/error/404.phtml:616
+msgid "Event"
+msgstr "حالة"
+
+#: ../view/error/404.phtml:616
+msgid "Interested In"
+msgstr "مهتم ب"
+
+#: ../view/error/404.phtml:616
+msgid "posted in"
+msgstr "نشر في"
+
+#: ../view/error/404.phtml:616
+msgid "Edit this post"
+msgstr "تعديل هذا المنصب"
+
+#: ../view/error/404.phtml:616
+msgid "Delete this post"
+msgstr "حذف هذه المشاركة"
+
+#: ../view/error/404.phtml:616
+msgid "Report this post"
+msgstr "الإبلاغ عن هذه المشاركة"
+
+#: ../view/error/404.phtml:616
+msgid "likes"
+msgstr "اعجابات"
+
+#: ../view/error/404.phtml:616
+msgid "comments"
+msgstr "تعليقات"
+
+#: ../view/error/404.phtml:616
+msgid "Post"
+msgstr "ما بعد"
+
+#: ../view/error/404.phtml:616
+msgid "More comments"
+msgstr "المزيد من التعليقات"
+
+#: ../view/error/404.phtml:616
+msgid "media to the album in"
+msgstr "وسائل الإعلام إلى الألبوم في"
+
+#: ../view/error/404.phtml:616
+msgid "Quit event"
+msgstr "إنهاء الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "I'm Going"
+msgstr "وانا ذاهب"
+
+#: ../view/error/404.phtml:616
+msgid "Join"
+msgstr "انضم"
+
+#: ../view/error/404.phtml:616
+msgid "GOING"
+msgstr "يذهب"
+
+#: ../view/error/404.phtml:616
+msgid "posted"
+msgstr "نشرت"
+
+#: ../view/error/404.phtml:616
+msgid "Album"
+msgstr "الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "in group"
+msgstr "في مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "link to"
+msgstr "متصلا"
+
+#: ../view/error/404.phtml:616
+msgid "Options"
+msgstr "خيارات"
+
+#: ../view/error/404.phtml:616
+msgid "Start typing your comment here"
+msgstr "بدء كتابة تعليقك هنا"
+
+#: ../view/error/404.phtml:616
+msgid "All Photos"
+msgstr "كل الصور"
+
+#: ../view/error/404.phtml:616
+msgid "Albums"
+msgstr "ألبومات"
+
+#: ../view/error/404.phtml:616
+msgid "Events"
+msgstr "أحداث"
+
+#: ../view/error/404.phtml:616
+msgid "All Media of"
+msgstr "جميع وسائل الإعلام ل"
+
+#: ../view/error/404.phtml:616
+msgid "No more images"
+msgstr "لا مزيد من الصور"
+
+#: ../view/error/404.phtml:616
+msgid "Delete this Album"
+msgstr "حذف هذا الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "Edit album"
+msgstr "تحرير الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "Tag Event"
+msgstr "العلامة الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Select events related to"
+msgstr "حدد الأحداث ذات الصلة"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Event"
+msgstr "اختيار الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Update"
+msgstr "التحديث"
+
+#: ../view/error/404.phtml:616
+msgid "Created album"
+msgstr "إنشاء ألبومات"
+
+#: ../view/error/404.phtml:616
+msgid "No more albums"
+msgstr "لا مزيد من ألبومات"
+
+#: ../view/error/404.phtml:616
+msgid "Images"
+msgstr "الصور"
+
+#: ../view/error/404.phtml:616
+msgid "Pending"
+msgstr "ريثما"
+
+#: ../view/error/404.phtml:616
+msgid "Add Friend"
+msgstr "اضف صديق"
+
+#: ../view/error/404.phtml:616
+msgid "No members joined"
+msgstr "هناك انضم يوجد أعضاء"
+
+#: ../view/error/404.phtml:616
+msgid "Update Post"
+msgstr "التحديث ما بعد"
+
+#: ../view/error/404.phtml:616
+msgid "Event Title"
+msgstr "عنوان الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Event Location"
+msgstr "موقع الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this status?"
+msgstr "هل أنت متأكد أنك تريد إزالة هذا المنصب؟"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this media?"
+msgstr "هل أنت متأكد أنك تريد إزالة هذا الإعلام؟"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this activity?"
+msgstr "هل أنت متأكد أنك تريد إزالة هذا النشاط؟"
+
+#: ../view/error/404.phtml:616
+msgid "Yes"
+msgstr "نعم"
+
+#: ../view/error/404.phtml:616
+msgid "No"
+msgstr "لا"
+
+#: ../view/error/404.phtml:616
+msgid "Please type your reason"
+msgstr "يرجى كتابة السبب الخاص بك"
+
+#: ../view/error/404.phtml:616
+msgid "Submit"
+msgstr "حفظ"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this Image?"
+msgstr "هل أنت متأكد أنك تريد إزالة هذه الصورة؟"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this album?"
+msgstr "هل أنت متأكد أنك تريد إزالة هذا الألبوم؟"
+
+#: ../view/error/404.phtml:616
+msgid "Please add some content before submitting"
+msgstr "الرجاء إضافة بعض المحتويات قبل تقديم"
+
+#: ../view/error/404.phtml:616
+msgid "Enter status to update"
+msgstr "إدخال نص لتحديث"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully Updated your post"
+msgstr "نجحت في تحديث الحالة الخاصة بك"
+
+#: ../view/error/404.phtml:616
+msgid "Enter event title"
+msgstr "أدخل عنوان الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Enter event date"
+msgstr "أدخل تاريخ الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Enter event location"
+msgstr "أدخل مكان الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "The post is removed successfully"
+msgstr "تتم إزالة الإدخال بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "The media is removed successfully"
+msgstr "تتم إزالة وسائل الإعلام بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "The activity is removed successfully"
+msgstr "تتم إزالة هذا النشاط بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "Select one reason"
+msgstr "تحديد سبب واحد للحذف"
+
+#: ../view/error/404.phtml:616
+msgid "Add reason"
+msgstr "إضافة السبب"
+
+#: ../view/error/404.phtml:616
+msgid "The  report is successfully submitted"
+msgstr "تم إرسال التقرير بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "Choose event"
+msgstr "اختيار الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Album title required"
+msgstr "عنوان الألبوم المطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "Sorry, something went wrong. Try again!"
+msgstr "عذرا، حدث خطأ ما. حاول مرة أخرى!"
+
+#: ../view/error/404.phtml:616
+msgid "Sorry! We couldn't find"
+msgstr "آسف! لم نتمكن من العثور"
+
+#: ../view/error/404.phtml:616
+msgid "Try a different search term, or click the map"
+msgstr "محاولة مصطلح بحث مختلف، أو انقر على الخريطة"
+
+#: ../view/error/404.phtml:616
+msgid "Woah... that's pretty remote! You're going to have to manually enter a place name"
+msgstr "نعم! ... هذا بعيد جدا! وأنت تسير لدينا لإدخال اسم المكان يدويا"
+
+#: ../view/error/404.phtml:616
+msgid "Sorry, You need to be a member of the group to interact with the posts"
+msgstr "عذرا، يجب أن تكون عضوا في المجموعة على التفاعل مع المشاركات"
+
+#: ../view/error/404.phtml:616
+msgid "Content Not exist"
+msgstr "المحتوى غير موجود"
+
+#: ../view/error/404.phtml:616
+msgid "Already requested"
+msgstr "طلبت بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Already processed this request"
+msgstr "معالجة بالفعل هذا الطلب"
+
+#: ../view/error/404.phtml:616
+msgid "Type your comments"
+msgstr "اكتب تعليقاتك"
+
+#: ../view/error/404.phtml:616
+msgid "Unauthorised access"
+msgstr "الوصول غير المصرح به"
+
+#: ../view/error/404.phtml:616
+msgid "Comment content required"
+msgstr "تعليق المحتوى المطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully removed comments"
+msgstr "تعليقات إزالة بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "This comments no longer exist in the system"
+msgstr "هذه التعليقات لم تعد موجودة في النظام"
+
+#: ../view/error/404.phtml:616
+msgid "Type your comments to submit"
+msgstr "اكتب تعليقاتك"
+
+#: ../view/error/404.phtml:616
+msgid "Album not exist"
+msgstr "ألبوم غير موجود"
+
+#: ../view/error/404.phtml:616
+msgid "Group is not existing"
+msgstr "المجموعة ليست موجودة"
+
+#: ../view/error/404.phtml:616
+msgid "Activity id required"
+msgstr "النشاط الهوية مطلوبة"
+
+#: ../view/error/404.phtml:616
+msgid "Activity not exist"
+msgstr "النشاط غير موجود"
+
+#: ../view/error/404.phtml:616
+msgid "Event not existing"
+msgstr "الحدث ليس موجودا"
+
+#: ../view/error/404.phtml:616
+msgid "Given group not exist in this system"
+msgstr "مجموعة معينة غير موجودة في هذا النظام"
+
+#: ../view/error/404.phtml:616
+msgid "Select one group"
+msgstr "حدد مجموعة واحدة"
+
+#: ../view/error/404.phtml:616
+msgid "Status is empty. Please add something before you submit"
+msgstr "دخول فارغ. الرجاء إضافة شيء قبل أن تقدم"
+
+#: ../view/error/404.phtml:616
+msgid "This status is not existing in the system"
+msgstr "هذا النص ليس موجودا في النظام"
+
+#: ../view/error/404.phtml:616
+msgid "Forms are incomplete. Some values are missing"
+msgstr "أشكال غير مكتملة. بعض القيم مفقودة"
+
+#: ../view/error/404.phtml:616
+msgid "Past date events are not allowed"
+msgstr "لا يسمح للأحداث التاريخ الماضية"
+
+#: ../view/error/404.phtml:616
+msgid "Already reported"
+msgstr "ذكرت بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Please enter your reason"
+msgstr "الرجاء إدخال السبب الخاص بك"
+
+#: ../view/error/404.phtml:616
+msgid "Given reason is not valid"
+msgstr "سبب المنع هو غير صالح"
+
+#: ../view/error/404.phtml:616
+msgid "This image is not existing in the system"
+msgstr "هذه الصورة ليست موجودة في النظام"
+
+#: ../view/error/404.phtml:616
+msgid "We are failed to identify the given group"
+msgstr "نحن فشلت في التعرف على مجموعة معينة"
+
+#: ../view/error/404.phtml:616
+msgid "Please add album title"
+msgstr "الرجاء إضافة عنوان الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "This album is not existing in the system"
+msgstr "هذا الألبوم هو ليس موجودا في النظام"
+
+#: ../view/error/404.phtml:616
+msgid "Event title required"
+msgstr "مطلوب عنوان الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Event date required"
+msgstr "مطلوب تاريخ الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "Event location required"
+msgstr "مطلوب الحدث المكان"
+
+#: ../view/error/404.phtml:616
+msgid "Event description required"
+msgstr "وصف الحدث المطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "Enter a valid date"
+msgstr "إدخال تاريخ صالح"
+
+#: ../view/error/404.phtml:616
+msgid "Loadmore"
+msgstr "حمل أكثر"
+
+#: ../view/error/404.phtml:616
+msgid "you"
+msgstr "أنت"
+
+#: ../view/error/404.phtml:616
+msgid "Add caption"
+msgstr "إضافة تعليق"
+
+#: ../view/error/404.phtml:616
+msgid "It's harassing me"
+msgstr "انها مضايقة لي"
+
+#: ../view/error/404.phtml:616
+msgid "It's harassing a friend"
+msgstr "انها مضايقة صديق"
+
+#: ../view/error/404.phtml:616
+msgid "Sexually explicit content"
+msgstr "محتوى جنسي صريح"
+
+#: ../view/error/404.phtml:616
+msgid "Violence or harmful behaviour"
+msgstr "العنف أو السلوك الضار"
+
+#: ../view/error/404.phtml:616
+msgid "Hate speech"
+msgstr "خطاب الكراهية"
+
+#: ../view/error/404.phtml:616
+msgid "I think it's an unauthorized use of my intellectual property"
+msgstr "اعتقد انها الاستخدام غير المصرح به للملكية الفكرية بلدي"
+
+#: ../view/error/404.phtml:616
+msgid "Spam or a scam"
+msgstr "البريد المزعج أو عملية احتيال"
+
+#: ../view/error/404.phtml:616
+msgid "This person is annoying"
+msgstr "هذا الشخص هو مزعج"
+
+#: ../view/error/404.phtml:616
+msgid "This timeline is pretending to be me or someone I know"
+msgstr "هذا الجدول الزمني يدعي أن يكون لي أو شخص أعرفه"
+
+#: ../view/error/404.phtml:616
+msgid "This timeline is full of inappropriate content"
+msgstr "هذا الجدول الزمني مليء محتوى غير لائق"
+
+#: ../view/error/404.phtml:616
+msgid "This is a fake account"
+msgstr "هذا هو حساب مزيف"
+
+#: ../view/error/404.phtml:616
+msgid "This profile represents a business or organization"
+msgstr "هذا الملف يمثل العمل أو المنظمة"
+
+#: ../view/error/404.phtml:616
+msgid "This timeline is using a fake name"
+msgstr "هذا الجدول الزمني يستخدم اسم مزيف"
+
+#: ../view/error/404.phtml:616
+msgid "Other"
+msgstr "آخر"
+
+#: ../view/error/404.phtml:616
+msgid "Spam"
+msgstr "بريد مؤذي"
+
+#: ../view/error/404.phtml:616
+msgid "Inappropriate"
+msgstr "غير مناسب"
+
+#: ../view/error/404.phtml:616
+msgid "Unfriend"
+msgstr "إزالة من الأصدقاء"
+
+#: ../view/error/404.phtml:616
+msgid "Edit Profile"
+msgstr "تعديل الملف الشخصي"
+
+#: ../view/error/404.phtml:616
+msgid "Report this user"
+msgstr "الإبلاغ عن هذا المستخدم"
+
+#: ../view/error/404.phtml:616
+msgid "Change"
+msgstr "تغيير"
+
+#: ../view/error/404.phtml:616
+msgid "Male"
+msgstr "رجل"
+
+#: ../view/error/404.phtml:616
+msgid "Female"
+msgstr "أنثى"
+
+#: ../view/error/404.phtml:616
+msgid "Biography"
+msgstr "سيرة"
+
+#: ../view/error/404.phtml:616
+msgid "Save Changes"
+msgstr "حفظ التغيرات"
+
+#: ../view/error/404.phtml:616
+msgid "Add / Remove Interests"
+msgstr "إضافة / إزالة الهوايات"
+
+#: ../view/error/404.phtml:616
+msgid "Add More Interests"
+msgstr "إضافة المزيد من الاهتمام"
+
+#: ../view/error/404.phtml:616
+msgid "upload failed.Please try again"
+msgstr "فشل التحميل. حاول مرة اخرى"
+
+#: ../view/error/404.phtml:616
+msgid "Please enter a reason"
+msgstr "يرجى إدخال سبب"
+
+#: ../view/error/404.phtml:616
+msgid "Gender"
+msgstr "جنس"
+
+#: ../view/error/404.phtml:616
+msgid "Username and Lastname"
+msgstr "اسم المستخدم واسم العائلة"
+
+#: ../view/error/404.phtml:616
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#: ../view/error/404.phtml:616
+msgid "Name, country and city fields are must to enter"
+msgstr "اسم وحقول البلد والمدينة لا بد منه للدخول"
+
+#: ../view/error/404.phtml:616
+msgid "Your Interests"
+msgstr "لكم الإهتمامات"
+
+#: ../view/error/404.phtml:616
+msgid "My Comments"
+msgstr "تعليقاتي"
+
+#: ../view/error/404.phtml:616
+msgid "My Likes"
+msgstr "بلدي الاعجاب"
+
+#: ../view/error/404.phtml:616
+msgid "Access denied"
+msgstr "تم الرفض"
+
+#: ../view/error/404.phtml:616
+msgid "Password must contain more than  5 characters"
+msgstr "كلمة السر يجب أن يحتوي على أكثر من 5 أحرف"
+
+#: ../view/error/404.phtml:616
+msgid "Email you are entered is already exist"
+msgstr "معرف البريد الإلكتروني يتم إدخالها لك هو موجود بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Your account is verified! Enjoy exploring Jeera!"
+msgstr "يتم التحقق من حسابك! تتمتع استكشاف جيرا!"
+
+#: ../view/error/404.phtml:616
+msgid "Verification code that you are entered is not valid"
+msgstr "رمز التحقق التي يتم إدخالها كنت غير صالح"
+
+#: ../view/error/404.phtml:616
+msgid "This option is expired for you"
+msgstr "انتهت مدة صلاحية هذا الخيار لك"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully reset your password"
+msgstr "إعادة تعيين كلمة المرور الخاصة بك بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "Some error occurred.Please try again"
+msgstr "وقع بعض الخطأ. حاول مرة اخرى"
+
+#: ../view/error/404.phtml:616
+msgid "Unauthorized access"
+msgstr "دخول غير مرخص"
+
+#: ../view/error/404.phtml:616
+msgid "User name required"
+msgstr "اسم المستخدم مطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "User email required"
+msgstr "البريد الإلكتروني للمستخدم المطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "Email already exist"
+msgstr "البريد الإلكتروني موجود بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Current Password Required"
+msgstr "كلمة المرور الحالية المطلوبة"
+
+#: ../view/error/404.phtml:616
+msgid "New Password Required"
+msgstr "كلمة المرور الجديدة المطلوبة"
+
+#: ../view/error/404.phtml:616
+msgid "Current password is wrong"
+msgstr "كلمة المرور الحالية خاطئة"
+
+#: ../view/error/404.phtml:616
+msgid "Image not available"
+msgstr "الصورة غير متوفرة"
+
+#: ../view/error/404.phtml:616
+msgid "Unable to locate the image"
+msgstr "غير قادر على تحديد موقع الصورة"
+
+#: ../view/error/404.phtml:616
+msgid "Minimum dimension 100x100"
+msgstr "الحد الأدنى البعد 100x100"
+
+#: ../view/error/404.phtml:616
+msgid "This file type is not supported. Please upload any image files"
+msgstr "لا يتم اعتماد هذا النوع من الملفات. يرجى تحميل أي ملفات الصور"
+
+#: ../view/error/404.phtml:616
+msgid "Received Requests"
+msgstr "تلقى الطلبات"
+
+#: ../view/error/404.phtml:616
+msgid "groups joined"
+msgstr "مجموعات انضمت"
+
+#: ../view/error/404.phtml:616
+msgid "groups created"
+msgstr "المجموعات التي تم إنشاؤها"
+
+#: ../view/error/404.phtml:616
+msgid "Sent Requests"
+msgstr "الطلبات المرسلة"
+
+#: ../view/error/404.phtml:616
+msgid "Mutual"
+msgstr "متبادل"
+
+#: ../view/error/404.phtml:616
+msgid "Created"
+msgstr "خلق"
+
+#: ../view/error/404.phtml:616
+msgid "Joined"
+msgstr "انضم"
+
+#: ../view/error/404.phtml:616
+msgid "Pending Requests"
+msgstr "الطلبات المعلقة"
+
+#: ../view/error/404.phtml:616
+msgid "Pending Approval"
+msgstr "بانتظار الموافقة"
+
+#: ../view/error/404.phtml:616
+msgid "Edit Group"
+msgstr "تحرير المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "new Requests"
+msgstr "طلبات جديدة"
+
+#: ../view/error/404.phtml:616
+msgid "Please Confirm"
+msgstr "يرجى تأكيد"
+
+#: ../view/error/404.phtml:616
+msgid "You are about to leave the group"
+msgstr "كنت على وشك مغادرة الفريق"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure?"
+msgstr "هل أنت متأكد؟"
+
+#: ../view/error/404.phtml:616
+msgid "Yes I'm sure"
+msgstr "نعم أنا متأكد"
+
+#: ../view/error/404.phtml:616
+msgid "This friend is already added"
+msgstr "يضاف هذا الصديق بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "No Record Found"
+msgstr "لا يوجد سجلات"
+
+#: ../view/error/404.phtml:616
+msgid "Create New Group"
+msgstr "إنشاء مجموعة جديدة"
+
+#: ../view/error/404.phtml:616
+msgid "Media type required"
+msgstr "نوع الوسائط المطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "Select one image to upload"
+msgstr "اختيار صورة واحدة لتحميل"
+
+#: ../view/error/404.phtml:616
+msgid "Add video to upload"
+msgstr "إضافة لتحميل الفيديو"
+
+#: ../view/error/404.phtml:616
+msgid "You are already a member of this group"
+msgstr "كنت بالفعل عضوا في هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "You are already requested"
+msgstr "يطلب منك بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "You need invitation from group admin to join this group"
+msgstr "تحتاج دعوة من مشرف الفريق للانضمام إلى هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Group not exist"
+msgstr "لا توجد مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Group name already exist"
+msgstr "اسم المجموعة موجودة بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Add options"
+msgstr "إضافة خيارات"
+
+#: ../view/error/404.phtml:616
+msgid "Add questions"
+msgstr "إضافة الأسئلة"
+
+#: ../view/error/404.phtml:616
+msgid "Unable to locate the group"
+msgstr "غير قادر على تحديد موقع المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Selected user is not a member in this group"
+msgstr "المستخدم المحدد ليس عضوا في هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Given group not existing in this system"
+msgstr "مجموعة معينة ليس موجودا في هذا النظام"
+
+#: ../view/error/404.phtml:616
+msgid "Explore &amp; Discover"
+msgstr "استكشاف & أمبير؛ اكتشاف"
+
+#: ../view/error/404.phtml:616
+msgid "There are"
+msgstr "يوجد"
+
+#: ../view/error/404.phtml:616
+msgid "groups that match"
+msgstr "المجموعات التي تشبه"
+
+#: ../view/error/404.phtml:616
+msgid "your interests"
+msgstr "لكم الإهتمامات"
+
+#: ../view/error/404.phtml:616
+msgid "Location"
+msgstr "موقع"
+
+#: ../view/error/404.phtml:616
+msgid "Filter By"
+msgstr "تصفية حسب"
+
+#: ../view/error/404.phtml:616
+msgid "All Categories"
+msgstr "جميع الفئات"
+
+#: ../view/error/404.phtml:616
+msgid "Interest"
+msgstr "فائدة"
+
+#: ../view/error/404.phtml:616
+msgid "County and city are required"
+msgstr "ويلزم المحافظة والمدينة"
+
+#: ../view/error/404.phtml:616
+msgid "Create Your Own Group"
+msgstr "إنشاء مجموعتك الخاصة"
+
+#: ../view/error/404.phtml:616
+msgid "Enter a location"
+msgstr "أدخل موقعا"
+
+#: ../view/error/404.phtml:616
+msgid "YOUR LOCATION"
+msgstr "مكانك"
+
+#: ../view/error/404.phtml:616
+msgid "Whats on your mind?"
+msgstr "ما الذي يدور في ذهنك؟"
+
+#: ../view/error/404.phtml:616
+msgid "Enter youtube url"
+msgstr "أدخل رابط يوتيوب"
+
+#: ../view/error/404.phtml:616
+msgid "Add text"
+msgstr "إضافة نص"
+
+#: ../view/error/404.phtml:616
+msgid "to"
+msgstr "إلى"
+
+#: ../view/error/404.phtml:616
+msgid "Create new Album"
+msgstr "إنشاء ألبوم جديد"
+
+#: ../view/error/404.phtml:616
+msgid "Album Title"
+msgstr "عنوان الالبوم"
+
+#: ../view/error/404.phtml:616
+msgid "About the album"
+msgstr "حول الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "Create"
+msgstr "خلق"
+
+#: ../view/error/404.phtml:616
+msgid "All members"
+msgstr "جميع الأعضاء"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group"
+msgstr "اختر المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Invite people"
+msgstr "دعوة الناس"
+
+#: ../view/error/404.phtml:616
+msgid "Choose Album"
+msgstr "اختيار الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "Select One Group"
+msgstr "حدد مجموعة واحدة"
+
+#: ../view/error/404.phtml:616
+msgid "Add album title"
+msgstr "إضافة عنوان الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully created your album"
+msgstr "إنشاء بنجاح ألبومك"
+
+#: ../view/error/404.phtml:616
+msgid "Invalid video url"
+msgstr "رابط الفيديو غير صالح"
+
+#: ../view/error/404.phtml:616
+msgid "Status is empty.. Please add something before you submit"
+msgstr "حالة فارغة .. الرجاء إضافة شيء قبل أن تقدم"
+
+#: ../view/error/404.phtml:616
+msgid "Select group"
+msgstr "اختر مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Select one file to upload"
+msgstr "حدد ملف للتحميل"
+
+#: ../view/error/404.phtml:616
+msgid "Select one video to upload"
+msgstr "حدد فيديو واحد لتحميل"
+
+#: ../view/error/404.phtml:616
+msgid "All Activity"
+msgstr "كل النشاط"
+
+#: ../view/error/404.phtml:616
+msgid "Interactions"
+msgstr "التفاعلات"
+
+#: ../view/error/404.phtml:616
+msgid "Posts By Friends"
+msgstr "مشاركات الأصدقاء"
+
+#: ../view/error/404.phtml:616
+msgid "Events Im Going To"
+msgstr "الأحداث انا ذاهب الى"
+
+#: ../view/error/404.phtml:616
+msgid "All Groups"
+msgstr "جميع المجموعات"
+
+#: ../view/error/404.phtml:616
+msgid "options"
+msgstr "خيارات"
+
+#: ../view/error/404.phtml:616
+msgid "Change ownership"
+msgstr "تغيير ملكية"
+
+#: ../view/error/404.phtml:616
+msgid "Delete Group"
+msgstr "حذف المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "About This Group"
+msgstr "حول هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "founded"
+msgstr "حول هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Edit group questionnaire"
+msgstr "استبيان تحرير مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Request Sent"
+msgstr "تم ارسال الطلب"
+
+#: ../view/error/404.phtml:616
+msgid "Group"
+msgstr "مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Edit Photo"
+msgstr "تحرير صور"
+
+#: ../view/error/404.phtml:616
+msgid "Upload Photo"
+msgstr "حمل الصورة"
+
+#: ../view/error/404.phtml:616
+msgid "Remove"
+msgstr "إزالة"
+
+#: ../view/error/404.phtml:616
+msgid "Leave this group"
+msgstr "ترك هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Report this group"
+msgstr "الإبلاغ عن هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Pending requests"
+msgstr "الطلبات المعلقة"
+
+#: ../view/error/404.phtml:616
+msgid "SEE ALL"
+msgstr "الاطلاع على كل"
+
+#: ../view/error/404.phtml:616
+msgid "Resize image"
+msgstr "تغيير حجم الصورة"
+
+#: ../view/error/404.phtml:616
+msgid "You are about to delete a banner image of"
+msgstr "أنت على وشك حذف صورة راية"
+
+#: ../view/error/404.phtml:616
+msgid "Banner image is important as it personalizes a group and makes it more recognizable among the users"
+msgstr "صورة راية لا يقل أهمية عن ذلك تخصيص مجموعة ويجعل من التعرف عليها بين المستخدمين"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to do this?"
+msgstr "هل أنت متأكد أنك تريد أن تفعل هذا؟"
+
+#: ../view/error/404.phtml:616
+msgid "Edit Questionnaire"
+msgstr "تحرير استبيان"
+
+#: ../view/error/404.phtml:616
+msgid "Invite People To Group"
+msgstr "دعوة الناس إلى المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Add all my friends"
+msgstr "إضافة جميع أصدقائي"
+
+#: ../view/error/404.phtml:616
+msgid "Invite"
+msgstr "دعوة"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to change the ownership of your group?"
+msgstr "هل أنت متأكد أنك تريد تغيير ملكية مجموعتك؟"
+
+#: ../view/error/404.phtml:616
+msgid "Choose one from the members"
+msgstr "اختيار واحد من أعضاء"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully update your changes"
+msgstr "بنجاح تحديث التغييرات"
+
+#: ../view/error/404.phtml:616
+msgid "You want to quit from this group?"
+msgstr "تريد إنهاء من هذه المجموعة؟"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to delete this group?"
+msgstr "هل أنت متأكد أنك تريد حذف هذه المجموعة؟"
+
+#: ../view/error/404.phtml:616
+msgid "Note:You won't  be able to cancel or reverse this action"
+msgstr "ملاحظة: أنت لن تكون قادرة على إلغاء أو عكس هذا الإجراء"
+
+#: ../view/error/404.phtml:616
+msgid "Your request is successfully submitted. Admin approval pending"
+msgstr "تم تقديم طلب الخاص بك بنجاح. موافقة المشرف انتظار"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully deleted your group"
+msgstr "حذف بنجاح مجموعتك"
+
+#: ../view/error/404.phtml:616
+msgid "Event Description"
+msgstr "وصف الحدث"
+
+#: ../view/error/404.phtml:616
+msgid "open"
+msgstr "فتح"
+
+#: ../view/error/404.phtml:616
+msgid "public"
+msgstr "عامة"
+
+#: ../view/error/404.phtml:616
+msgid "private"
+msgstr "خاص"
+
+#: ../view/error/404.phtml:616
+msgid "Group Title Required"
+msgstr "مجموعة عنوان مطلوب"
+
+#: ../view/error/404.phtml:616
+msgid "The questionnaire is successfully updated"
+msgstr "يتم تحديث الاستبيان بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "Select one to invite"
+msgstr "اختر واحدا دعوة"
+
+#: ../view/error/404.phtml:616
+msgid "Invitation sent to selected users"
+msgstr "دعوة التي وجهت للمستخدمين اختيار"
+
+#: ../view/error/404.phtml:616
+msgid "Please enter the reason"
+msgstr "الرجاء إدخال السبب"
+
+#: ../view/error/404.phtml:616
+msgid "The report is submitted successfully"
+msgstr "ويقدم هذا التقرير بنجاح"
+
+#: ../view/error/404.phtml:616
+msgid "No more cities are available"
+msgstr "ليست أكثر المدن المتاحة"
+
+#: ../view/error/404.phtml:616
+msgid "Request not authorised"
+msgstr "طلب غير مخول"
+
+#: ../view/error/404.phtml:616
+msgid "Group Owners"
+msgstr "مالك مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Your Friends"
+msgstr "أصحابك"
+
+#: ../view/error/404.phtml:616
+msgid "promote to admin"
+msgstr "تعزيز إلى مسؤول"
+
+#: ../view/error/404.phtml:616
+msgid "revoke rights"
+msgstr "إلغاء الحقوق"
+
+#: ../view/error/404.phtml:616
+msgid "remove from group"
+msgstr "إزالة من مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Settings"
+msgstr "إعدادات"
+
+#: ../view/error/404.phtml:616
+msgid "Account"
+msgstr "حساب"
+
+#: ../view/error/404.phtml:616
+msgid "Language"
+msgstr "لغة"
+
+#: ../view/error/404.phtml:616
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: ../view/error/404.phtml:616
+msgid "Email required"
+msgstr "البريد الإلكتروني المطلوبة"
+
+#: ../view/error/404.phtml:616
+msgid "Timezone"
+msgstr "منطقة زمنية"
+
+#: ../view/error/404.phtml:616
+msgid "Phone"
+msgstr "هاتف"
+
+#: ../view/error/404.phtml:616
+msgid "Save"
+msgstr "حفظ"
+
+#: ../view/error/404.phtml:616
+msgid "Notify Me When"
+msgstr "يخطر لي عندما"
+
+#: ../view/error/404.phtml:616
+msgid "Email Me When"
+msgstr "الكتابة لي عندما"
+
+#: ../view/error/404.phtml:616
+msgid "My Group Join Request is Accepted"
+msgstr "من المسلم به مجموعتي طلب الانضمام"
+
+#: ../view/error/404.phtml:616
+msgid "Somebody Added me as a Friend"
+msgstr "شخص ما أضاف لي كصديق"
+
+#: ../view/error/404.phtml:616
+msgid "Somebody Wants to Join My Group"
+msgstr "شخص يريد الانضمام لمجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "New Comment on My Post"
+msgstr "تعليق جديد على منصبي"
+
+#: ../view/error/404.phtml:616
+msgid "Current Password"
+msgstr "كلمة السر الحالية"
+
+#: ../view/error/404.phtml:616
+msgid "Current Password required"
+msgstr "كلمة المرور الحالية المطلوبة"
+
+#: ../view/error/404.phtml:616
+msgid "New Password"
+msgstr "كلمة المرور الجديدة"
+
+#: ../view/error/404.phtml:616
+msgid "Confirm Password"
+msgstr "تأكيد كلمة السر"
+
+#: ../view/error/404.phtml:616
+msgid "New Password and  Confirm Password must be same"
+msgstr "يجب أن تكون كلمة المرور الجديدة وتأكيد كلمة المرور نفس"
+
+#: ../view/error/404.phtml:616
+msgid "Please select Timezone"
+msgstr "يرجى تحديد المنطقة الزمنية"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully updated your profile details"
+msgstr "تحديث بنجاح تفاصيل ملفك الشخصي"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully updated your profile settings"
+msgstr "تحديث بنجاح إعدادات ملف التعريف الخاص بك"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully updated your password"
+msgstr "نجحت في تحديث كلمة السر الخاصة بك"
+
+#: ../view/error/404.phtml:616
+msgid "People"
+msgstr "الناس"
+
+#: ../view/error/404.phtml:616
+msgid "Post Likes"
+msgstr "أمثال مشاركة"
+
+#: ../view/error/404.phtml:616
+msgid "No likes to show"
+msgstr "لا يحب أن تظهر"
+
+#: ../view/error/404.phtml:616
+msgid "Send"
+msgstr "إرسال"
+
+#: ../view/error/404.phtml:616
+msgid "Previous"
+msgstr "سابق"
+
+#: ../view/error/404.phtml:616
+msgid "Next"
+msgstr "التالى"
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this item?"
+msgstr "هل أنت متأكد أنك تريد إزالة هذا البند؟"
+
+#: ../view/error/404.phtml:616
+msgid "Created Album"
+msgstr "إنشاء ألبومات"
+
+#: ../view/error/404.phtml:616
+msgid "Successfully update album"
+msgstr "تحديث بنجاح الألبوم"
+
+#: ../view/error/404.phtml:616
+msgid "New Password required"
+msgstr "كلمة المرور الجديدة المطلوبة"
+
+#: ../view/error/404.phtml:616
+msgid "No comments to show"
+msgstr "لا يوجد تعليقات لاظهار"
+
+#: ../view/error/404.phtml:616
+msgid "Search Results"
+msgstr "نتائج البحث"
+
+#: ../view/error/404.phtml:616
+msgid "Members"
+msgstr "الأعضاء"
+
+#: ../view/error/404.phtml:616
+msgid "sent you a friend request"
+msgstr "ارسلت لك طلب صداقة"
+
+#: ../view/error/404.phtml:616
+msgid "accepted your friend request"
+msgstr "قبول طلب صديقك"
+
+#: ../view/error/404.phtml:616
+msgid "invited you to join the group"
+msgstr "دعاك للانضمام إلى مجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "sent you a request to join the group"
+msgstr "أرسل لك طلب للانضمام إلى المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "joined your group"
+msgstr "انضم مجموعتك"
+
+#: ../view/error/404.phtml:616
+msgid "accepted your  request to join the group"
+msgstr "قبلت طلبك للانضمام إلى المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "added a new post in"
+msgstr "وأضاف وظيفة جديدة في"
+
+#: ../view/error/404.phtml:616
+msgid "commented  on your post in"
+msgstr "علق على مشاركتك في"
+
+#: ../view/error/404.phtml:616
+msgid "mentioned you in a comment on"
+msgstr "ذكرت لكم في تعليق على"
+
+#: ../view/error/404.phtml:616
+msgid "liked the status in"
+msgstr "أحب الوضع في"
+
+#: ../view/error/404.phtml:616
+msgid "liked your comment in the group"
+msgstr "أحب تعليقك في المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "added a new event in"
+msgstr "وأضاف حدثا جديدا في"
+
+#: ../view/error/404.phtml:616
+msgid "commented  on the event  in"
+msgstr "علق على الحدث في"
+
+#: ../view/error/404.phtml:616
+msgid "mentioned you in a comment in"
+msgstr "ذكرت لكم في تعليق في"
+
+#: ../view/error/404.phtml:616
+msgid "liked the event in"
+msgstr "أحب هذا الحدث في"
+
+#: ../view/error/404.phtml:616
+msgid "joined the event in"
+msgstr "انضم الحدث في"
+
+#: ../view/error/404.phtml:616
+msgid "added a new media in"
+msgstr "إضافة وسائل الإعلام الجديدة في"
+
+#: ../view/error/404.phtml:616
+msgid "added a new comment on the media in"
+msgstr "وأضاف تعليق جديد على وسائل الإعلام في"
+
+#: ../view/error/404.phtml:616
+msgid "mentioned you in a comment  in"
+msgstr "ذكرت لكم في تعليق في"
+
+#: ../view/error/404.phtml:616
+msgid "liked the media in"
+msgstr "أحب وسائل الإعلام في"
+
+#: ../view/error/404.phtml:616
+msgid "assigned you as an admin of the group"
+msgstr "تعيينك كمسؤول للمجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "assigned you as an owner of the group"
+msgstr "تم تعيينك باعتباره صاحب المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "See All"
+msgstr "رؤية جميع"
+
+#: ../view/error/404.phtml:616
+msgid "Help &amp; Support"
+msgstr "المساعدة والدعم الفني"
+
+#: ../view/error/404.phtml:616
+msgid "Account Settings"
+msgstr "إعدادات الحساب"
+
+#: ../view/error/404.phtml:616
+msgid "Log Out"
+msgstr "تسجيل خروج"
+
+#: ../view/error/404.phtml:616
+msgid "No more notifications to show"
+msgstr "لا مزيد من الإخطارات لاظهار"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

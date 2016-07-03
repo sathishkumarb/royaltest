@@ -1,0 +1,467 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-02 18:30+0400\n"
+"PO-Revision-Date: 2015-09-02 18:56+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ar_AE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+
+#: ../view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: ../view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: ../view/error/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: ../view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: ../view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: ../view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: ../view/error/404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: ../view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: ../view/error/404.phtml:53 ../view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: ../view/error/404.phtml:56 ../view/error/404.phtml:80
+#: ../view/error/index.phtml:11 ../view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: ../view/error/404.phtml:60 ../view/error/404.phtml:84
+#: ../view/error/index.phtml:15 ../view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: ../view/error/404.phtml:64 ../view/error/404.phtml:88
+#: ../view/error/index.phtml:19 ../view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: ../view/error/404.phtml:74 ../view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: ../view/error/404.phtml:103 ../view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: ../view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: ../view/layout/container_top.phtml:17 ../view/layout/layout - Copy.phtml:5
+#: ../view/layout/planet_home.phtml:17
+msgid "Explore Yourself"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:38
+msgid "1625"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:49 Copy.phtml:53
+msgid "Home"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:51
+msgid "Logout"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:54
+msgid "Register"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:55
+msgid "Login"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:58
+msgid "Contact Us"
+msgstr ""
+
+#: ../view/layout/layout - Copy.phtml:71
+msgid "All rights reserved."
+msgstr ""
+
+#: ../view/error/404.phtml:13
+msgid "Sign Up"
+msgstr "تسجيل"
+
+#: ../view/error/404.phtml:11
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+#: ../view/error/404.phtml:25
+msgid "One Space For All Your Interests"
+msgstr "واحد الفضاء للجميع مصالحكم"
+
+#: ../view/error/404.phtml:329
+msgid "Not a Jeera member yet?"
+msgstr "لست عضوا بعد؟"
+
+#: ../view/error/404.phtml:329
+msgid "Sign Up now!"
+msgstr "أفتح حساب الأن!"
+
+#: ../view/error/404.phtml:333
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: ../view/error/404.phtml:341
+msgid "Password"
+msgstr "كلمة السر"
+
+#: ../view/error/404.phtml:349
+msgid "Keep me logged in"
+msgstr "تذكرني"
+
+#: ../view/error/404.phtml:321
+msgid "Forgot Password?"
+msgstr "هل نسيت كلمة المرور؟"
+
+#: ../view/error/404.phtml:321
+msgid "Forgot Password"
+msgstr "نسيت كلمة المرور"
+
+#: ../view/error/404.phtml:687
+msgid "Please enter a valid email address"
+msgstr "يرجى إدخال عنوان بريد إلكتروني صالح"
+
+#: ../view/error/404.phtml:691
+msgid "Please enter your password"
+msgstr "يرجى إدخال كلمة المرور"
+
+#: ../view/error/404.phtml:691
+msgid "Invalid Email or Password"
+msgstr "البريد الإلكتروني أو كلمة السر خاطئة"
+
+#: ../view/error/404.phtml:685
+msgid "Please enter your email address"
+msgstr "الرجاء إدخال عنوان البريد الإلكتروني الخاص بك"
+
+#: ../Application/src/Application/Controller/IndexController.php:423
+msgid "Your account has been suspended. Please contact Jeera administrator to activate it"
+msgstr "تم تعليق حسابك. يرجى الاتصال بمسؤول جيرا لتفعيلها"
+
+#: ../Application/src/Application/Controller/IndexController.php:423
+msgid "Your account has been blocked. Please contact Jeera administrator  to activate it"
+msgstr "تم حظر الحساب الخاص بك. يرجى الاتصال بمسؤول جيرا لتفعيلها"
+
+#: ../Application/src/Application/Controller/IndexController.php:428
+msgid "Account does not exist"
+msgstr "الحساب غير موجود"
+
+#: ../view/error/404.phtml:614
+msgid "Forgot your password"
+msgstr "نسيت كلمة المرور"
+
+#: ../view/error/404.phtml:616
+msgid "Hey it happens to everyone. Just tell us what email address you’re using and we will send you the instructions."
+msgstr "مهلا يحدث للجميع. فقط اقول لنا ما عنوان البريد الإلكتروني الذي تستخدمه وسوف نرسل لك التعليمات."
+
+#: ../view/error/404.phtml:616
+msgid "Confirm"
+msgstr "تأكيد"
+
+#: ../view/error/404.phtml:616
+msgid "The email you entered does not exist in our system, kindly register as a new user"
+msgstr "عدم وجود البريد الإلكتروني الذي أدخلته في نظامنا. تسجيل يرجى كمستخدم جديد"
+
+#: ../view/error/404.phtml:616
+msgid "The password reset steps has been sent to your mail, please follow the instructions to reset it"
+msgstr "وقد أرسلت الخطوات إعادة تعيين كلمة المرور إلى البريد الخاص بك، يرجى اتباع التعليمات لإعادة تعيينها"
+
+#: ../view/error/404.phtml:616
+msgid "Unable to process"
+msgstr "غير قادر على معالجة"
+
+#: ../view/error/404.phtml:616
+msgid "Almost Done..."
+msgstr "تم تقريبا ..."
+
+#: ../view/error/404.phtml:616
+msgid "Resend verification"
+msgstr "التحقق إعادة إرسال"
+
+#: ../view/error/404.phtml:616
+msgid "This account is activated already"
+msgstr "يتم تنشيط هذا الحساب بالفعل"
+
+#: ../view/error/404.phtml:616
+msgid "Verification code is sent to your email. Please check your email and follow the instructions"
+msgstr "يتم إرسال رمز التحقق إلى البريد الإلكتروني الخاص بك. يرجى التحقق من بريدك الالكتروني واتبع التعليمات"
+
+#: ../view/error/404.phtml:616
+msgid "There are no records in this system with e-mail ID given"
+msgstr "لا توجد سجلات في هذا النظام مع معرف البريد الإلكتروني نظرا"
+
+#: ../view/error/404.phtml:616
+msgid "Data not available"
+msgstr "البيانات غير متوفرة"
+
+#: ../view/error/404.phtml:616
+msgid "No more posts to show."
+msgstr "لا مزيد من المشاركات لتظهر."
+
+#: ../view/error/404.phtml:616
+msgid "Join This Group"
+msgstr "انضم إلى هذه المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Open Group"
+msgstr "مفتوحة المجموعة"
+
+#: ../view/error/404.phtml:616
+msgid "Public Group"
+msgstr "المجموعة الجمهور"
+
+#: ../view/error/404.phtml:616
+msgid "Private Group"
+msgstr "مجموعة خاصة"
+
+#: ../view/error/404.phtml:616
+msgid "Group Interests"
+msgstr "مجموعة الهوايات"
+
+#: ../view/error/404.phtml:616
+msgid "members"
+msgstr "أعضاء"
+
+#: ../view/error/404.phtml:616
+msgid "friends"
+msgstr "أصدقاء"
+
+#: ../view/error/404.phtml:616
+msgid "fashion"
+msgstr "موضة"
+
+#: ../view/error/404.phtml:616
+msgid "sports"
+msgstr "الرياضة"
+
+#: ../view/error/404.phtml:616
+msgid "games"
+msgstr "ألعاب"
+
+#: ../view/error/404.phtml:616
+msgid "culture"
+msgstr "ثقافة"
+
+#: ../view/error/404.phtml:616
+msgid "tag1"
+msgstr "1 بطاقة"
+
+#: ../view/error/404.phtml:616
+msgid "tag2"
+msgstr "2 بطاقة"
+
+#: ../view/error/404.phtml:616
+msgid "action"
+msgstr "عمل"
+
+#: ../view/error/404.phtml:616
+msgid "Thriller"
+msgstr "قصة مثيرة"
+
+#: ../view/error/404.phtml:616
+msgid "drama"
+msgstr "دراما"
+
+#: ../view/error/404.phtml:616
+msgid "love"
+msgstr "الحب"
+
+#: ../view/error/404.phtml:616
+msgid "dance"
+msgstr "رقص"
+
+#: ../view/error/404.phtml:616
+msgid "war"
+msgstr "حرب"
+
+#: ../view/error/404.phtml:616
+msgid "Indian"
+msgstr "هندي"
+
+#: ../view/error/404.phtml:616
+msgid "world"
+msgstr "عالم"
+
+#: ../view/error/404.phtml:616
+msgid "pop"
+msgstr "فرقعة"
+
+#: ../view/error/404.phtml:616
+msgid "rock"
+msgstr "صخرة"
+
+#: ../view/error/404.phtml:616
+msgid "classical"
+msgstr "كلاسيكي"
+
+#: ../view/error/404.phtml:616
+msgid "cricket"
+msgstr "كريكيت"
+
+#: ../view/error/404.phtml:616
+msgid "football"
+msgstr "كرة القدم"
+
+#: ../view/error/404.phtml:616
+msgid "tag3"
+msgstr "العلامة 3"
+
+#: ../view/error/404.phtml:616
+msgid "United Arab Emirates"
+msgstr "الإمارات العربية المتحدة"
+
+#: ../view/error/404.phtml:616
+msgid "UAE"
+msgstr "الإمارات العربية المتحدة"
+
+#: ../view/error/404.phtml:616
+msgid "Oman"
+msgstr "يا شيخ"
+
+#: ../view/error/404.phtml:616
+msgid "OM"
+msgstr "يا شيخ"
+
+#: ../view/error/404.phtml:616
+msgid "Bahrain"
+msgstr "البحرين"
+
+#: ../view/error/404.phtml:616
+msgid "BH"
+msgstr "البحرين"
+
+#: ../view/error/404.phtml:616
+msgid "India"
+msgstr "الهند"
+
+#: ../view/error/404.phtml:616
+msgid "IN"
+msgstr "الهند"
+
+#: ../view/error/404.phtml:616
+msgid "Abu Dhabi"
+msgstr "أبوظبي"
+
+#: ../view/error/404.phtml:616
+msgid "Ajman"
+msgstr "عجمان"
+
+#: ../view/error/404.phtml:616
+msgid "Dubai"
+msgstr "دبي"
+
+#: ../view/error/404.phtml:616
+msgid "Fujairah"
+msgstr "الفجيرة"
+
+#: ../view/error/404.phtml:616
+msgid "Ras al-Khaimah"
+msgstr "راس الخيمه"
+
+#: ../view/error/404.phtml:616
+msgid "Sharjah"
+msgstr "الشارقة"
+
+#: ../view/error/404.phtml:616
+msgid "Umm al-Quwain"
+msgstr "أم القوين"
+
+#: ../view/error/404.phtml:616
+msgid "Ad Dakhiliyah"
+msgstr "Ad Dakhiliyah"
+
+#: ../view/error/404.phtml:616
+msgid "Ad Dhahirah North"
+msgstr "Ad Dhahirah North"
+
+#: ../view/error/404.phtml:616
+msgid "Al Batinah North"
+msgstr "منطقة شمال الباطنة"
+
+#: ../view/error/404.phtml:616
+msgid "Al Batinah South"
+msgstr "الباطنة جنوب"
+
+#: ../view/error/404.phtml:616
+msgid "Al Buraimi"
+msgstr "البريمي"
+
+#: ../view/error/404.phtml:616
+msgid "Al Wusta"
+msgstr "Al Wusta"
+
+#: ../view/error/404.phtml:616
+msgid "Ash Sharqiyah North"
+msgstr "Ash Sharqiyah North"
+
+#: ../view/error/404.phtml:616
+msgid "Ash Sharqiyah South"
+msgstr "Ash Sharqiyah South"
+
+#: ../view/error/404.phtml:616
+msgid "Dhofar"
+msgstr "ظفار"
+
+#: ../view/error/404.phtml:616
+msgid "Mascat"
+msgstr "المسكات عنب طيب الشذا"
+
+#: ../view/error/404.phtml:616
+msgid "Musandam"
+msgstr "مسندم"
+
+#: ../view/error/404.phtml:616
+msgid "Kerala"
+msgstr "ولاية كيرالا"
+
+#: ../view/error/404.phtml:616
+msgid "Tamilnadu"
+msgstr "تاميل نادو"
+
+#: ../view/error/404.phtml:616
+msgid "Karnataka"
+msgstr "كارناتاكا"
+
+#: ../view/error/404.phtml:616
+msgid "Assam"
+msgstr "اسام"
+
+
+
+
+

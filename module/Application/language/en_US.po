@@ -1,0 +1,2380 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ZendSkeletonApplication\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-05 22:17-0700\n"
+"PO-Revision-Date: 2012-07-05 22:17-0700\n"
+"Last-Translator: Evan Coury <me@evancoury.com>\n"
+"Language-Team: ZF Contibutors <zf-devteam@zend.com>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../view/layout/layout.phtml:6
+#: ../view/layout/layout.phtml:33
+msgid "Skeleton Application"
+msgstr ""
+
+#: ../view/layout/layout.phtml:36
+msgid "Home"
+msgstr ""
+
+#: ../view/layout/layout.phtml:50
+msgid "All rights reserved."
+msgstr ""
+
+#: ../view/application/index/index.phtml:2
+#, php-format
+msgid "Welcome to %sZend Framework 2%s"
+msgstr ""
+
+#: ../view/application/index/index.phtml:3
+#, php-format
+msgid "Congratulations! You have successfully installed the %sZF2 Skeleton Application%s. You are currently running Zend Framework version %s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2."
+msgstr ""
+
+#: ../view/application/index/index.phtml:4
+msgid "Fork Zend Framework 2 on GitHub"
+msgstr ""
+
+#: ../view/application/index/index.phtml:10
+msgid "Follow Development"
+msgstr ""
+
+#: ../view/application/index/index.phtml:11
+#, php-format
+msgid "Zend Framework 2 is under active development. If you are interested in following the development of ZF2, there is a special ZF2 portal on the official Zend Framework website which provides links to the ZF2 %swiki%s, %sdev blog%s, %sissue tracker%s, and much more. This is a great resource for staying up to date with the latest developments!"
+msgstr ""
+
+#: ../view/application/index/index.phtml:12
+msgid "ZF2 Development Portal"
+msgstr ""
+
+#: ../view/application/index/index.phtml:16
+msgid "Discover Modules"
+msgstr ""
+
+#: ../view/application/index/index.phtml:17
+#, php-format
+msgid "The community is working on developing a community site to serve as a repository and gallery for ZF2 modules. The project is available %son GitHub%s. The site is currently live and currently contains a list of some of the modules already available for ZF2."
+msgstr ""
+
+#: ../view/application/index/index.phtml:18
+msgid "Explore ZF2 Modules"
+msgstr ""
+
+#: ../view/application/index/index.phtml:22
+msgid "Help &amp; Support"
+msgstr ""
+
+#: ../view/application/index/index.phtml:23
+#, php-format
+msgid "If you need any help or support while developing with ZF2, you may reach us via IRC: %s#zftalk on Freenode%s. We'd love to hear any questions or feedback you may have regarding the beta releases. Alternatively, you may subscribe and post questions to the %smailing lists%s."
+msgstr ""
+
+#: ../view/application/index/index.phtml:24
+msgid "Ping us on IRC"
+msgstr ""
+
+#: ../view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: ../view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: ../view/error/index.phtml:11
+#: ../view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: ../view/error/index.phtml:15
+#: ../view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: ../view/error/index.phtml:19
+#: ../view/error/index.phtml:43
+#: ../view/error/404.phtml:55
+msgid "Stack trace"
+msgstr ""
+
+#: ../view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: ../view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: ../view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: ../view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: ../view/error/404.phtml:13
+msgid "The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: ../view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: ../view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: ../view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: ../view/error/404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: ../view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: ../view/error/404.phtml:51
+msgid "Exception"
+msgstr ""
+
+#: ../view/error/404.phtml:13
+msgid "Sign Up"
+msgstr ""
+
+#: ../view/error/404.phtml:11
+msgid "Log In"
+msgstr ""
+
+
+#: ../view/error/404.phtml:25
+msgid "One Space For All Your Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:329
+msgid "Not a Jeera member yet?"
+msgstr ""
+
+#: ../view/error/404.phtml:329
+msgid "Sign Up now!"
+msgstr ""
+
+#: ../view/error/404.phtml:333
+msgid "Email"
+msgstr ""
+
+#: ../view/error/404.phtml:341
+msgid "Password"
+msgstr ""
+
+#: ../view/error/404.phtml:349
+msgid "Keep me logged in"
+msgstr ""
+
+#: ../view/error/404.phtml:351
+msgid "Forgot Password?"
+msgstr ""
+
+#: ../view/error/404.phtml:321
+msgid "Forgot Password"
+msgstr ""
+
+#: ../view/error/404.phtml:687
+msgid "Please enter a valid email address"
+msgstr ""
+
+#: ../view/error/404.phtml:691
+msgid "Please enter your password"
+msgstr ""
+
+#: ../view/error/404.phtml:685
+msgid "Please enter your email address"
+msgstr ""
+
+#: ../Application/src/Application/Controller/IndexController.php:419
+msgid "Invalid Email or Password"
+msgstr ""
+
+#: ../Application/src/Application/Controller/IndexController.php:423
+msgid "Your account has been suspended. Please contact Jeera administrator to activate it"
+msgstr ""
+
+#: ../Application/src/Application/Controller/IndexController.php:423
+msgid "Your account has been blocked. Please contact Jeera administrator  to activate it"
+msgstr ""
+
+#: ../Application/src/Application/Controller/IndexController.php:428
+msgid "Account does not exist"
+msgstr ""
+
+#: ../view/error/404.phtml:45
+msgid "Forgot your password"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Hey it happens to everyone. Just tell us what email address you’re using and we will send you the instructions."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Confirm"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The email you entered does not exist in our system, kindly register as a new user"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The password reset steps has been sent to your mail, please follow the instructions to reset it"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Unable to process"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Almost Done..."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Resend verification"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This account is activated already"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Verification code is sent to your email. Please check your email and follow the instructions"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "There are no records in this system with e-mail ID given"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Data not available"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No more posts to show."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Join This Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Open Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Public Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Private Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "members"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "friends"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "fashion"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "sports"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "games"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "culture"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "tag1"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "tag2"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "action"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Thriller"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "drama"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "love"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "dance"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "war"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Indian"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "world"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "pop"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "rock"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "classical"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "cricket"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "football"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "tag3"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "United Arab Emirates"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "UAE"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Oman"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "OM"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Bahrain"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "BH"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "India"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "IN"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Abu Dhabi"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Ajman"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Dubai"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Fujairah"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Ras al-Khaimah"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sharjah"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Umm al-Quwain"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Ad Dakhiliyah"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Ad Dhahirah North"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Al Batinah North"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Al Batinah South"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Al Buraimi"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Al Wusta"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Ash Sharqiyah North"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Ash Sharqiyah South"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Dhofar"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Mascat"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Musandam"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Kerala"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Tamilnadu"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Karnataka"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Assam"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "SignUp for Jeera"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your Name"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your Email Address"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "OR"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "By signing up, you confirm that you accept our"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Terms of Service"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter your location"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Go Back"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Continue"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Hello there"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Welcome to Jeera"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Our platform envolves around two key pilars, groups and interests. We will help you setting those up to make the most of Jeera"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Let’s Go!"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "We have created a smarter way to browse through interests to find exactly what you like"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pick some categories that interest you"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Done"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Great job! Now let's see what those categories are covering"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pick some interests from the categories"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Very Interesting! Let’s see who is sharing your interests now!"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "It’s time for a big jump, join  groups now and start connecting with each of their members"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Don’t see what you are looking for?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Try"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Creating Your Own Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "More"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No more groups exist in the system based on your interest"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Finish"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Close"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Introduce Yourself"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Looks like you haven’t written your bio, why don’t you introduce yourself to the group? *You can edit this later on your profile page"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Skip"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Upload Your Photo"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Upload"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Looks like you haven’t uploaded your profile photo. You can do it now (this improves your credibility on Jeera)."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You can change this later on your profile page"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "How about knowing a bit more about you?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your request has been sent"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Thank you for joining this group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Show Me Some More Similar Groups"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Position and Size Your Photo"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Apply"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Cancel"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group Info"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "INVITE &amp; ASK"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group name is required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group Country"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group City"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Country and city are required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Upload Banner Photo"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose a photo to upload"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group Type"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This group will be visible to everyone and can be joined immediately"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "without group owner approval"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This group will be visible to everyone, but the group owner receives requests for the group joining which he can accept or decline."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This group will not be visible to anyone in regular search. It is invite based and users can not join the group unless you invite them."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Describe Your Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group Description is required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Category"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Chosen Group Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select some interests to proceed"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invite People to Your Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Optional"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add more people"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No matching profiles"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add Questionary"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Once people start sending their requests to join your group, the questionnaire can be helpful. By asking few questions, you can learn about your potential group members and make better choices about who should be able to join your group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Question"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "add"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "remove"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Click to add question"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "1 questions left"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Already have an account"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select Country"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select City"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please enter your name"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Password must contain more than 5 charectors"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invalid email address"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter a valid email address"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Email you have entered already exists"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter email address"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Available"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select atleast one category"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "photography"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Cinema"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "History"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Music"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sports"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "test"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select atleast one tag"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "User not exist in the system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your session expired, please log in again to continue"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pending Request"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Tell something interesting about yourself"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your Answer"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "e.g. Arsenal Lovers"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Type Your Question"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Type Your Options"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All Category"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Name Your Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Tell us what is your group about"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Search Interest"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select Question Type"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Textarea"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "CheckBox"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Radiobutton"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please enter question"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please enter atleast two options for question"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Error occurred. Please try again"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please select atleast one interest"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group title is required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This group name is already taken"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Some error occurred. Please try again"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your account is not yet verified"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "click here to resend the verification mail"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Verification code is sent. Please check your email and follow the instructions."
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Explore"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "My Feed"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Show more"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Notifications"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Search Jeera"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Posts"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Groups"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Friends"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "My Activity"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Show"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Text"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Media"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Interested In"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "posted in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit this post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Delete this post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Report this post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "likes"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "comments"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "More comments"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "media to the album in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Quit event"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "I'm Going"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Join"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "GOING"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "posted"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "in group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "link to"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Options"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Start typing your comment here"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All Photos"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Albums"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Events"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All Media of"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No more images"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Delete this Album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Tag Event"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select events related to"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Event"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Update"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Created album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No more albums"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Images"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pending"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add Friend"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No members joined"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Update Post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event Title"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event Location"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this status?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this media?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this activity?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Yes"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please type your reason"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Submit"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this Image?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this album?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please add some content before submitting"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter status to update"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully Updated your post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter event title"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter event date"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter event location"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The post is removed successfully"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The media is removed successfully"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The activity is removed successfully"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select one reason"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add reason"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The  report is successfully submitted"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose event"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Album title required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sorry, something went wrong. Try again!"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sorry! We couldn't find"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Try a different search term, or click the map"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Woah... that's pretty remote! You're going to have to manually enter a place name"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sorry, You need to be a member of the group to interact with the posts"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Content Not exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Already requested"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Already processed this request"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Type your comments"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Unauthorised access"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Comment content required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully removed comments"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This comments no longer exist in the system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Type your comments to submit"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Album not exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group is not existing"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Activity id required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Activity not exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event not existing"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Given group not exist in this system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select one group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Status is empty. Please add something before you submit"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This status is not existing in the system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Forms are incomplete. Some values are missing"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Past date events are not allowed"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Already reported"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please enter your reason"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Fields are not complete"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Given reason is not valid"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This image is not existing in the system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "We are failed to identify the given group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please add album title"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This album is not existing in the system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event title required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event date required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event location required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event description required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter a valid date"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Loadmore"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "you"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add caption"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "It's harassing me"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "It's harassing a friend"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sexually explicit content"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Violence or harmful behaviour"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Hate speech"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "I think it's an unauthorized use of my intellectual property"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Spam or a scam"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This person is annoying"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This timeline is pretending to be me or someone I know"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This timeline is full of inappropriate content"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This is a fake account"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This profile represents a business or organization"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This timeline is using a fake name"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Other"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Spam"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Inappropriate"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Unfriend"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit Profile"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Report this user"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Change"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Male"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Female"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Biography"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Save Changes"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add / Remove Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add More Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "upload failed.Please try again"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please enter a reason"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Gender"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Username and Lastname"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Date of Birth"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Name, country and city fields are must to enter"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your Interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "My Comments"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "My Likes"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Access denied"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Password must contain more than  5 characters"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Email you are entered is already exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your account is verified! Enjoy exploring Jeera!"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Verification code that you are entered is not valid"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This option is expired for you"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully reset your password"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Some error occurred.Please try again"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Unauthorized access"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "User name required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "User email required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Email already exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Current Password Required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "New Password Required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Current password is wrong"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Image not available"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Unable to locate the image"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Minimum dimension 100x100"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This file type is not supported. Please upload any image files"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Received Requests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "groups joined"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "groups created"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Sent Requests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Mutual"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Created"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Joined"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pending Requests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pending Approval"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "new Requests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please Confirm"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You are about to leave the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Yes I'm sure"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "This friend is already added"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No Record Found"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Create New Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Media type required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select one image to upload"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add video to upload"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You are already a member of this group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You are already requested"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You need invitation from group admin to join this group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group not exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group name already exist"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add options"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add questions"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Unable to locate the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Selected user is not a member in this group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Given group not existing in this system"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Explore &amp; Discover"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "There are"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "groups that match"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "your interests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Location"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Filter By"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All Categories"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Interest"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "County and city are required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Create Your Own Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter a location"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "YOUR LOCATION"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Whats on your mind?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Enter youtube url"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add text"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "to"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Create new Album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Album Title"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "About the album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Create"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All members"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invite people"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose Album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select One Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add album title"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully created your album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invalid video url"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Status is empty.. Please add something before you submit"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select one file to upload"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select one video to upload"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All Activity"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Interactions"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Posts By Friends"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Events Im Going To"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "All Groups"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "options"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Change ownership"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Delete Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "About This Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "founded"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit group questionnaire"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Request Sent"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit Photo"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Upload Photo"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Remove"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Leave this group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Report this group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Pending requests"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "SEE ALL"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Resize image"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You are about to delete a banner image of"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Banner image is important as it personalizes a group and makes it more recognizable among the users"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to do this?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Edit Questionnaire"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invite People To Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Add all my friends"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invite"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to change the ownership of your group?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Choose one from the members"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully update your changes"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "You want to quit from this group?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to delete this group?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Note:You won't  be able to cancel or reverse this action"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your request is successfully submitted. Admin approval pending"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully deleted your group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Event Description"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "open"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "public"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "private"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group Title Required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The questionnaire is successfully updated"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Select one to invite"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Invitation sent to selected users"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please enter the reason"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "The report is submitted successfully"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No more cities are available"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Request not authorised"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Group Owners"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Your Friends"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "promote to admin"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "revoke rights"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "remove from group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Settings"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Account"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Language"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Username"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Email required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Timezone"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Phone"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Save"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Notify Me When"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Email Me When"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "My Group Join Request is Accepted"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Somebody Added me as a Friend"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Somebody Wants to Join My Group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "New Comment on My Post"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Current Password"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Current Password required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "New Password"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Confirm Password"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "New Password and  Confirm Password must be same"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Please select Timezone"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully updated your profile details"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully updated your profile settings"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully updated your password"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "People"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Post Likes"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No likes to show"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Send"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Previous"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Next"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Are you sure you want to remove this item?"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Created Album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Successfully update album"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "New Password required"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No comments to show"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Search Results"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Members"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "sent you a friend request"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "accepted your friend request"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "invited you to join the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "sent you a request to join the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "joined your group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "accepted your  request to join the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "added a new post in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "commented  on your post in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "mentioned you in a comment on"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "liked the status in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "liked your comment in the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "added a new event in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "commented  on the event  in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "mentioned you in a comment in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "liked the event in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "joined the event in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "added a new media in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "added a new comment on the media in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "mentioned you in a comment  in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "liked the media in"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "assigned you as an admin of the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "assigned you as an owner of the group"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "See All"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Help &amp; Support"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Account Settings"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "Log Out"
+msgstr ""
+
+#: ../view/error/404.phtml:616
+msgid "No more notifications to show"
+msgstr ""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

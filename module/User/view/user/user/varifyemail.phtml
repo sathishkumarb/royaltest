@@ -1,0 +1,29 @@
+<div class="verify_email_container">
+	<div class="verify_email_message"><?php echo $message; ?></div>
+	<div>
+	<?php if($email!=''){ ?>
+	<a href="javascript:void(0)" id="resend_varification">Resend Verification</a>
+	<?php }else{
+		?>
+		<a href="<?php echo $this->basePath();  ?>" id="resend_varification">Resend Verification</a>	
+		<?php
+	} ?>
+	</div>
+</div> 
+ <script>
+ $(document).on("click","#resend_varification",function(){ 
+	var email = '<?php echo $email; ?>';
+	var url     = baseurl+'/user/resendverification';
+	var data = {user_email: email};
+	$.ajax({
+		type:'POST',
+        url: url,
+        data:data,	 
+		success: function(response) {
+			
+			$(".verify_email_message").html(response.return_array.process_info);			 
+		},
+		error: function(resp) { alert(resp.responseText); }
+	});
+});
+ </script>

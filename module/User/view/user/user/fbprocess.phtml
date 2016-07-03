@@ -1,0 +1,267 @@
+<div class="home-header-container">
+    	<div class="home-header-logo">
+        	<div class="home-logo"><a href="javascript:void(0);"><img src="<?php echo $this->basePath(); ?>/public/images/jeera-logo.png" alt="" /></a></div>
+            <div class="login-menu">            	 
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="banner-text">
+        	One Space For All Your <br />Interests
+            <div class="banner-buttons">               
+            </div>
+        </div>
+    </div>
+      
+<!-- Modal Sign Up -->
+<div class="pop_bg modal fade" id="signup_popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+<!-- Modal Sign Up End-->
+<style>
+.country_close,.city_close{display:none;}
+ 
+</style>
+<script type="text/javascript"> 
+var user_details = <?php echo json_encode($user_details); ?>;
+var loader_content = '';
+var name = user_details.user_given_name;
+var email = user_details.user_email; 
+var country=user_details.user_profile_country_id;
+var city =user_details.user_profile_city_id;
+var message=''; 
+$(document).ready(function(){
+	$('select.styled').customSelect();
+	$("#signup_popup").modal({
+		  keyboard: false,
+		  backdrop:'static'
+		});
+	createSignupForm(message);	 
+	$(document).on("click","#signup_go_step-2",function(){ SignupVarification(); });
+	$(document).on("click","#signup_go_step-3",function(){ SignupProcess(); });
+	$(document).on("change","#user_country_id",function(){ LoadCityDropdown(); }); 
+	 
+	$(document).on("click",".country_li",function(){ 
+	var selected_country =$(this).attr("data-item"); 
+	var country_title =$(this).html(); 
+	selectCountry(selected_country,country_title); });
+	$(document).on("click",".city_li",function(){ 
+	var selected_city =$(this).attr("data-item"); 
+	var city_title =$(this).html(); 
+	selectCity(selected_city,city_title); });
+}); 
+$(document).on("keyup","#signup_popup",function(event){  
+    if(event.keyCode == 13){
+        $(".default_butn_blue").click();
+    }
+});
+ 
+function createSignupForm(messages){
+	loadCountryDropdown();
+	var signup_html = '';
+	signup_html +='<div class="modal-dialog login_popup">';          
+    signup_html +='<div class="modal-content">';
+    signup_html +='<div class="modal-header">';     
+    signup_html +='<div class="clear"></div>';
+    signup_html +='</div>';
+    signup_html +='<div class="modal-body signup_body">';
+    signup_html +='<div id="signup_step1">';
+    signup_html +='<div class="step1_outer">';
+    signup_html +='<div  style="color: red; " class="already_member sign_up_error">'+messages+'</div>';
+    signup_html +='<h3>Sign Up for Jeera</h3>';    
+    signup_html +='<div class="login-field">';
+    signup_html +='<input name="user_given_name" type="text" id="user_given_name" placeholder="Your Name" value="'+name+'" />';
+    signup_html +='<span id="user_given_name_error"style="color: red;"></span>';
+    signup_html +='</div>';
+    signup_html +='<h3>Your Location</h3>';
+    signup_html +='<div class="login-field">';
+    signup_html +='<div class="country_drop_wrapper"></div>';                   
+    signup_html +='</div>';
+    signup_html +='<div class="login-field">';
+    signup_html +='<div class="city_drop_wrapper"></div>'; 
+    signup_html +='</div>'; 
+    signup_html +='<div class="signup_button">';
+    signup_html +='<div class="link_back_login"></div>';
+    signup_html +='<div class="signup-link"><a href="javascript:void(0);" class="default_butn_blue"  id="signup_go_step-2">Continue</a></div>';
+    signup_html +='<div class="clear"></div>';
+    signup_html +='</div>';
+    signup_html +='</div>'; 
+    signup_html +='</div> ';          
+    signup_html +='</div> ';         
+    signup_html +='</div>';
+    signup_html +='</div>';
+	$("#signup_popup").html(signup_html); 
+	
+}
+ 
+function createSignupThirdForm(domain){  
+	var signup_html = '';
+	signup_html +='<div class="modal-dialog login_popup">';          
+    signup_html +='<div class="modal-content">';
+    signup_html +='<div class="modal-header">';
+    signup_html +='';
+    signup_html +='<div class="clear"></div>';
+    signup_html +='</div>';
+    signup_html +='<div class="modal-body signup_body">';
+    signup_html +='<div id="signup_step3" >';
+    signup_html +='<h3>Almost Done...</h3>';
+    signup_html +='<p>We\'ve sent an email to <span class="user_email">'+email+'</span>. Open it up and click on the activation link activate your account.</p>';
+    signup_html +='<div class="signup_button">';
+	if(domain!=''){
+    signup_html +='<div class="signup-link"><a href="http://www."'+domain+' target="_blank"  class="default_butn_blue">Take Me To '+domain+'</a></div>';
+	}
+	signup_html +='<div><a href="<?php echo $this->basePath(); ?>" class="default_butn_blue" >Continue</a></div>';
+    signup_html +='<div class="clear"></div>';
+    signup_html +='</div>';
+    signup_html +='</div> ';                   
+    signup_html +='</div> ';         
+    signup_html +='</div>';
+    signup_html +='</div>';
+	$("#signup_popup").html(signup_html);
+	//window.location.reload();
+}
+ 
+function validateEmail($email) {
+  var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  if( !emailReg.test( $email ) ){ return false; } else { return true; }
+} 
+ 
+ 
+function SignupVarification(){
+	name = $("#user_given_name").val();
+	 
+	var error_flag = 0;
+	if(name==''){ $("#user_given_name_error").html("Enter your name");error_flag = 1;}else{$("#user_given_name_error").html("");}
+	country = $("#user_country_id").val();
+	city =  $("#user_city_id").val();
+	if(error_flag){return false;}else{SignupProcess();}
+}
+function loadCountryDropdown(){
+	url  = baseurl+'/country/ajaxCountryList';
+
+	var country_html = '';
+
+	$.ajax({
+
+            type:'POST',
+
+            url: url,
+
+			beforeSend:function(){ AjaxLoader('.country_drop_wrapper');},
+
+            success: function(response) {
+
+				countries = response ;				
+				var i=0;
+				var country_list = '';
+				$.each(countries.countries, function( key, value ){
+					if(i==0){
+						country_selected = value.country_id;
+						country_name = value.country_title;
+					} 
+					country_list += '<li class="country_li child_li" data-item="'+value.country_id+'">'+value.country_title+'</li>';
+					 
+					i++;
+				});
+				country_html += '<a id="dLabel_country" href="javascript:void(0)" data-toggle="dropdown"   data-item="'+country_selected+'">'+country_name+'</a><ul id="user_country_id" class=" dropdown-menu border_radius " aria-labelledby="dLabel_country" role="menu">'+country_list;
+				country_html += '</ul>';		 
+
+				$('.country_drop_wrapper').html(country_html);
+
+				LoadCityDropdown(country_selected);
+
+			},
+
+			error: function(resp) { AjaxLoaderRemove('.country_drop_wrapper');alert(resp.responseText); }
+
+	});
+}
+function LoadCityDropdown(){
+	url  = baseurl+'/city/ajaxCitiesList';
+
+	//var country_id = $("#user_country_id").val();
+
+	var city_html = '';
+
+	var data = { country_id: country_selected,};
+
+	$.ajax({
+
+            type:'POST',
+
+            url: url,
+
+			data:data,
+
+			beforeSend:function(){ AjaxLoader('.city_drop_wrapper');},
+
+            success: function(response) {
+
+				citys = response ;			 
+				var city_list ='';
+				var i=0;
+				$.each(citys.cities, function( key, value ){
+					if(i==0){
+						city_selected = value.city_id;
+						city_name = value.name;
+						 
+					} 
+					city_list += '<li class="city_li city_child_li" data-item="'+value.city_id+'">'+value.name+'</li>';
+					 
+					i++;				 
+				});
+
+				 
+				city_html += '<a id="dLabel_city" href="javascript:void(0)" data-toggle="dropdown"   data-item="'+city_selected+'">'+city_name+'</a><ul id="user_country_id" class=" dropdown-menu border_radius " aria-labelledby="dLabel_country" role="menu">'+city_list;
+				city_html += '</ul>';
+				$('.city_drop_wrapper').html(city_html);					 
+
+			},
+
+			error: function(resp) { AjaxLoaderRemove('.city_drop_wrapper');alert(resp.responseText); }
+
+	});
+}
+function selectCountry(selected_country,country_title){ 
+	$("#dLabel_country").html(country_title);
+	$("#dLabel_country").attr("data-item",selected_country);
+	LoadCityDropdown(selected_country);
+	 
+}
+function selectCity(selected_city,city_title){
+	$("#dLabel_city").html(city_title);
+	$("#dLabel_city").attr("data-item",selected_city);
+	 
+}
+
+function SignupProcess(){
+	var url     = baseurl+'/user/fbauth';
+
+	country = $("#dLabel_country").attr("data-item");
+
+	city =  $("#dLabel_city").attr("data-item"); 
+	var data = {user_given_name: name,            
+            user_country_id: country,
+            user_city_id: city};
+	$.ajax({
+            type:'POST',
+            url: url,
+			data:data,
+			beforeSend:function(){ AjaxLoader('.reg_continue_button');},
+            success: function(response) {
+				if(response.return_array.process_status == 'success'){window.location.href=baseurl;}else{
+					createSignupForm(response.return_array.process_info);					
+				}				
+			},
+			error: function(resp) { ReplaceLoaderWithHystory('.reg_continue_button');alert(resp.responseText); }
+	});
+}
+ 
+function AjaxLoader(field){
+	loader_content = $(field).html();
+	$(field).html('<img id="loadmoreajaxloaderpop_up" src="'+baseurl+'/public/images/ajax_loader.gif" >');
+} 
+function ReplaceLoaderWithHystory(field){$(field).html(loader_content);}
+function AjaxLoaderAppend(field){$(field).append('<img id="loadmoreajaxloaderpop_up" src="'+baseurl+'/public/images/ajax_loader.gif" >');}
+function AjaxLoaderRemove(field){$("#loadmoreajaxloaderpop_up").remove();}
+ 
+ 
+</script>
+ 
